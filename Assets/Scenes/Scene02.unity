@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1341,6 +1341,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1622741784763604, guid: 2c83384252eaed34ea2eee76356ded56, type: 3}
+      propertyPath: m_Name
+      value: Player POV
+      objectReference: {fileID: 0}
     - target: {fileID: 4853503451421402, guid: 2c83384252eaed34ea2eee76356ded56, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1382,10 +1386,6 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622741784763604, guid: 2c83384252eaed34ea2eee76356ded56, type: 3}
-      propertyPath: m_Name
-      value: Player POV
       objectReference: {fileID: 0}
     - target: {fileID: 23062758311289700, guid: 2c83384252eaed34ea2eee76356ded56,
         type: 3}
@@ -2657,3 +2657,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6739654564181753227
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6739654563817124555, guid: c912659635d16ce40b720273b484ae25,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6739654563817124554, guid: c912659635d16ce40b720273b484ae25,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6739654563817124554, guid: c912659635d16ce40b720273b484ae25,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6739654563817124554, guid: c912659635d16ce40b720273b484ae25,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6739654563817124554, guid: c912659635d16ce40b720273b484ae25,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c912659635d16ce40b720273b484ae25, type: 3}
