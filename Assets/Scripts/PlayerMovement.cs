@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour {
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
     public float maxBlinkLength = 4.0f;
+    public Vector3 blinkDirection;
 
     private float jumpVelocity = 0.0f;
     private Vector3 moveDirection = Vector3.zero;
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if (Input.GetButtonDown("Fire2"))
         {
-            // Blink();
+            Blink();
         }
 
         moveDirection = new Vector3(Input.GetAxis("Horizontal") * speed, jumpVelocity, Input.GetAxis("Vertical") * speed);
@@ -45,7 +46,7 @@ public class PlayerMovement : MonoBehaviour {
 
     void Blink() {
 
-        Vector3 blinkDirection = transform.forward;
+        blinkDirection = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
         float blinkLength = maxBlinkLength;
 
         if (Physics.Raycast(transform.position, blinkDirection, out hit, blinkLength))
