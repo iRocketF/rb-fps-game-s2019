@@ -47,6 +47,8 @@ public class PlayerMovement : MonoBehaviour {
     void Blink() {
 
         blinkDirection = transform.forward * Input.GetAxis("Vertical") + transform.right * Input.GetAxis("Horizontal");
+        blinkDirection.y = 0;
+        blinkDirection.Normalize();
         float blinkLength = maxBlinkLength;
 
         if (Physics.Raycast(transform.position, blinkDirection, out hit, blinkLength))

@@ -22,7 +22,7 @@ public class PlayerShooter : MonoBehaviour {
     {
         if(Input.GetMouseButtonDown(0)){
             AudioManager.instance.PlaySound("SoundRandom1");
-            Vector3 point = new Vector3(playerCam.pixelWidth / 2, playerCam.pixelHeight / 2, 0);
+            Vector3 point = new Vector3(playerCam.scaledPixelWidth / 2, playerCam.scaledPixelHeight / 2, 0);
             Ray ray = playerCam.ScreenPointToRay(point);
             RaycastHit hit;
             if(Physics.Raycast (ray, out hit))

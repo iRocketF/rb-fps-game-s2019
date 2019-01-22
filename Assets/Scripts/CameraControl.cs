@@ -38,7 +38,7 @@ public class CameraControl : MonoBehaviour {
               
         }
 
-        Debug.DrawRay(transform.position, transform.forward * 10, Color.black);
+        Debug.DrawRay(transform.position, transform.forward * 10, Color.red);
 
 		 
 	}
