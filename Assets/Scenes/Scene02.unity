@@ -976,6 +976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitObject: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &551903514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,7 +1407,7 @@ PrefabInstance:
     - target: {fileID: 20440700886115344, guid: 2c83384252eaed34ea2eee76356ded56,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 20440700886115344, guid: 2c83384252eaed34ea2eee76356ded56,
         type: 3}
@@ -1655,7 +1656,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1843671918146072, guid: bf3f7a92236764546a1f4e233767e2a3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4221960064973318, guid: bf3f7a92236764546a1f4e233767e2a3, type: 3}
       propertyPath: m_LocalPosition.x
