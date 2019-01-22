@@ -12,15 +12,21 @@ public class CameraControl : MonoBehaviour {
 
     public RotationAxis axes = RotationAxis.MouseX;
 
-    public float minimumVert = -45.0f;
-    public float maximumVert = 45.0f;
+    public float minimumVert = -90.0f;
+    public float maximumVert = 90.0f;
     public float sensHorizontal = 5.0f;
     public float sensVertical = 5.0f;
 
     public float _rotationX = 0;
 
-	// Update is called once per frame
-	void Update () {
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    // Update is called once per frame
+    void Update () {
         if(axes == RotationAxis.MouseX)
         {
             transform.Rotate (0, Input.GetAxis("Mouse X") * sensHorizontal, 0);

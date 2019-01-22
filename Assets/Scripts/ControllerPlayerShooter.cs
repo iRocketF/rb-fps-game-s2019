@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControllerPlayerShooter : MonoBehaviour {
+public class ControllerPlayerShooter : MonoBehaviour
+{
 
-    private Camera playerCam;
+    public Camera playerCam;
     public GameObject hitObject;
     public Transform player;
+
+    public float damage = 10f;
+    public float range;
 
     // Start is called before the first frame update
     void Start()
@@ -14,35 +18,36 @@ public class ControllerPlayerShooter : MonoBehaviour {
         player = GetComponentInParent<Transform>();
         playerCam = GetComponent<Camera>();
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1Cntrl")){
-            AudioManager.instance.PlaySound("SoundRandom1");
+        if (Input.GetButtonDown("Fire1Cntrl"))
+        {
+            Shoot();
+        }
+    }
 
-            Vector3 rayOrigin = playerCam.ViewportToWorldPoint(new Vector3(.5f, .5f, 0));
+    void Shoot()
+    {
+        AudioManager.instance.PlaySound("SoundRandom1");
 
-            RaycastHit hit;
+        RaycastHit hit;
 
-            if(Physics.Raycast (rayOrigin,playerCam.transform.forward, out hit))
+        if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit))
+        {
+            hitObject = hit.transform.gameObject;
+
+            Target target = hitObject.GetComponent<Target>();
+
+            if (target != null)
             {
-                hitObject = hit.transform.gameObject;
-
-                TargetShot target = hitObject.GetComponent<TargetShot>();
-
-                if(target !=null)
-                {
-                    target.GotShot();
-                } else
-                {
-                    StartCoroutine(ShotGen(hit.point));
-                }
-                
+                target.TakeDamage(damage);
+            }
+            else
+            {
+                StartCoroutine(ShotGen(hit.point));
             }
         }
     }
@@ -55,7 +60,7 @@ public class ControllerPlayerShooter : MonoBehaviour {
 
         yield return new WaitForSeconds(1);
 
-        Destroy (sphere);
+        Destroy(sphere);
     }
 
     void OnGUI()

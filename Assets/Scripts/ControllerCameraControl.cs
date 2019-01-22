@@ -12,15 +12,21 @@ public class ControllerCameraControl : MonoBehaviour {
 
     public RotationAxis axes = RotationAxis.JoystickX;
 
-    public float minimumVert = -45.0f;
-    public float maximumVert = 45.0f;
+    public float minimumVert = -90.0f;
+    public float maximumVert = 90.0f;
     public float sensHorizontal = 10.0f;
     public float sensVertical = 10.0f;
 
     public float _rotationX = 0;
 
-	// Update is called once per frame
-	void Update () {
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    // Update is called once per frame
+    void Update () {
         if(axes == RotationAxis.JoystickX)
         {
             transform.Rotate (0, Input.GetAxis("Joystick X") * sensHorizontal, 0);
