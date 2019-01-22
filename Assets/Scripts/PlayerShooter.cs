@@ -6,10 +6,12 @@ public class PlayerShooter : MonoBehaviour {
 
     private Camera playerCam;
     public GameObject hitObject;
+    public Transform player;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GetComponentInParent<Transform>();
         playerCam = GetComponent<Camera>();
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -22,7 +24,8 @@ public class PlayerShooter : MonoBehaviour {
     {
         if(Input.GetMouseButtonDown(0)){
             AudioManager.instance.PlaySound("SoundRandom1");
-            Vector3 point = new Vector3(playerCam.scaledPixelWidth / 2, playerCam.scaledPixelHeight / 2, 0);
+            Vector3 point = new Vector3(playerCam.transform.rotation.x,player.rotation.y * player.forward.y, 0);
+            
             Ray ray = playerCam.ScreenPointToRay(point);
             RaycastHit hit;
             if(Physics.Raycast (ray, out hit))
