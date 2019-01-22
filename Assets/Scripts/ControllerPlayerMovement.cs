@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ControllerPlayerMovement : MonoBehaviour {
 
-    public float speed = 6.0f;
+    public float speed = 8.0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
     public float maxBlinkLength = 4.0f;
+    public Vector3 blinkDirection;
 
     private float jumpVelocity = 0.0f;
     private Vector3 moveDirection = Vector3.zero;
@@ -32,9 +33,9 @@ public class ControllerPlayerMovement : MonoBehaviour {
             jumpVelocity -= gravity * Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2Cntrl"))
         {
-            // Blink();
+            Blink();
         }
 
         moveDirection = new Vector3(Input.GetAxis("HorizontalCntrl") * speed, jumpVelocity, Input.GetAxis("VerticalCntrl") * speed);
@@ -43,9 +44,12 @@ public class ControllerPlayerMovement : MonoBehaviour {
 
 	}
 
-    void Blink() {
+    void Blink()
+    {
 
-        Vector3 blinkDirection = moveDirection;
+        blinkDirection = transform.forward * Input.GetAxis("Vertical") + transform.right * Input.GetAxis("Horizontal");
+        blinkDirection.y = 0;
+        blinkDirection.Normalize();
         float blinkLength = maxBlinkLength;
 
         if (Physics.Raycast(transform.position, blinkDirection, out hit, blinkLength))

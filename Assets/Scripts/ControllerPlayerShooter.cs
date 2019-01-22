@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShooter : MonoBehaviour {
+public class ControllerPlayerShooter : MonoBehaviour {
 
     private Camera playerCam;
     public GameObject hitObject;
@@ -22,7 +22,7 @@ public class PlayerShooter : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetButtonDown("Fire1Cntrl")){
             AudioManager.instance.PlaySound("SoundRandom1");
 
             Vector3 rayOrigin = playerCam.ViewportToWorldPoint(new Vector3(.5f, .5f, 0));
