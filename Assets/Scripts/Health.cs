@@ -5,26 +5,15 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
 
-    public float health = 50f;
-    public float maxhealth = 100f;
+    public float health = 100f;
 
-    public void Update()
+    private void IncreaseHealth()
     {
-        if(health >= maxhealth)
-        {
-            health = maxhealth;
-        }
+
     }
 
-    public void IncreaseHealth(float amount)
+    private void TakeDamage(float amount)
     {
-        //ParticleSystem/ShaderGraph
-        health += amount;
-    }
-
-    public void TakeDamage(float amount)
-    {
-        //particle system/shader
         health -= amount;
         if(health <= 0f)
         {
@@ -34,7 +23,6 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        //ShaderGraph here
-        Destroy(this.gameObject, 1f);
+        Destroy(this.gameObject);
     }
 }

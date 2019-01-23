@@ -36,7 +36,7 @@ public class HitScanWeapon : MonoBehaviour {
         if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit))
         {
             hitObject = hit.transform.gameObject;
-            Health target = hitObject.GetComponent<Health>();
+            Target target = hitObject.GetComponent<Target>();
 
             if (target != null)
             {
