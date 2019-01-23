@@ -7,7 +7,7 @@ public class CleanUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(this, 5.0f);
+        Destroy(this.gameObject, 5.0f);
     }
 
 }

@@ -25,6 +25,7 @@ public class ProjectileWeapon : MonoBehaviour
 
     void Shoot()
     {
+        AudioManager.instance.PlaySound("Sound_Launcher");
         Rigidbody shot = Instantiate(projectile, shotPos.position, shotPos.rotation) as Rigidbody;
         shot.AddForce(shotPos.forward * shotForce);
     }

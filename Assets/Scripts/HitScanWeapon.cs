@@ -29,7 +29,7 @@ public class HitScanWeapon : MonoBehaviour {
 
     void Shoot()
     {
-        AudioManager.instance.PlaySound("SoundRandom1");
+        AudioManager.instance.PlaySound("Sound_Shot");
 
         RaycastHit hit;
 
