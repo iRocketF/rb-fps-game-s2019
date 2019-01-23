@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShooter : MonoBehaviour {
+public class HitScanWeapon : MonoBehaviour {
 
     public Camera playerCam;
     public GameObject hitObject;
@@ -10,19 +10,19 @@ public class PlayerShooter : MonoBehaviour {
 
     public float damage = 10f;
     public float range;
+    public float fireRate = 15f;
 
-    // Start is called before the first frame update
+    private float nextTimeToFire = 0f;
     void Start()
     {
         player = GetComponentInParent<Transform>();
-        playerCam = GetComponent<Camera>();
-    
+        playerCam = GetComponentInParent<Camera>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetButton("Fire1") && Time.time >= nextTimeToFire){
+            nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
     }
@@ -36,7 +36,6 @@ public class PlayerShooter : MonoBehaviour {
         if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit))
         {
             hitObject = hit.transform.gameObject;
-
             Target target = hitObject.GetComponent<Target>();
 
             if (target != null)
