@@ -207,8 +207,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db773318d72930744b90ba730326f135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCam: {fileID: 0}
   hitObject: {fileID: 0}
   player: {fileID: 0}
+  damage: 10
+  range: 0
 --- !u!1 &1843671918146072
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6fdbfbeea2cc794f95a7ef8205e5fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 8
   jumpSpeed: 8
   gravity: 20
   maxBlinkLength: 4
@@ -340,6 +343,6 @@ MonoBehaviour:
   axes: 1
   minimumVert: -45
   maximumVert: 45
-  sensHorizontal: 5
-  sensVertical: 5
+  sensHorizontal: 50
+  sensVertical: 50
   _rotationX: 0
