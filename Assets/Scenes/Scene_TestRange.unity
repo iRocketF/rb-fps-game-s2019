@@ -878,7 +878,6 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Scenes/Scene_TestRange.unity
   m_GameObject: {fileID: 397159032}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &413802971
@@ -978,10 +977,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7508642339592672311}
   m_PrefabAsset: {fileID: 0}
-=======
-  m_GameObject: {fileID: 413802971}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
->>>>>>> parent of 3317ade... SettingsMenu Foundation:Assets/Scenes/Scene02.unity
 --- !u!1 &551903514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,25 +1895,9 @@ PrefabInstance:
     - target: {fileID: 668865594, guid: bf3f7a92236764546a1f4e233767e2a3, type: 3}
       propertyPath: m_Name
       value: Weapon
-<<<<<<< HEAD:Assets/Scenes/Scene_TestRange.unity
-=======
-      objectReference: {fileID: 0}
-    - target: {fileID: 114899232642963910, guid: bf3f7a92236764546a1f4e233767e2a3,
-        type: 3}
-      propertyPath: sensHorizontal
-      value: 50
->>>>>>> parent of 3317ade... SettingsMenu Foundation:Assets/Scenes/Scene02.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 114899232642963910, guid: bf3f7a92236764546a1f4e233767e2a3,
-        type: 3}
-<<<<<<< HEAD:Assets/Scenes/Scene_TestRange.unity
-=======
-      propertyPath: sensVertical
-      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114135541326600668, guid: bf3f7a92236764546a1f4e233767e2a3,
         type: 3}
->>>>>>> parent of 3317ade... SettingsMenu Foundation:Assets/Scenes/Scene02.unity
       propertyPath: sensHorizontal
       value: 50
       objectReference: {fileID: 0}
@@ -1927,7 +1906,6 @@ PrefabInstance:
       propertyPath: sensVertical
       value: 50
       objectReference: {fileID: 0}
-<<<<<<< HEAD:Assets/Scenes/Scene_TestRange.unity
     - target: {fileID: 668865596, guid: bf3f7a92236764546a1f4e233767e2a3, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1955,10 +1933,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxhealth: 100
-=======
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bf3f7a92236764546a1f4e233767e2a3, type: 3}
->>>>>>> parent of 3317ade... SettingsMenu Foundation:Assets/Scenes/Scene02.unity
 --- !u!1 &1395352514
 GameObject:
   m_ObjectHideFlags: 0
