@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-
     public float health = 50f;
     public float maxhealth = 100f;
 
@@ -34,7 +33,9 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+
         //ShaderGraph here
+        Debug.Log("Player death...");
         Destroy(this.gameObject, 1f);
     }
 }
