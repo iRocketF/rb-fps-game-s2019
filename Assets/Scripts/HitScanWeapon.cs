@@ -42,22 +42,7 @@ public class HitScanWeapon : MonoBehaviour {
             {
                 target.TakeDamage(damage);
             }
-            else
-            {
-                StartCoroutine(ShotGen(hit.point));
-            }
         }
-    }
-
-    private IEnumerator ShotGen(Vector3 pos)
-    {
-        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        sphere.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-        sphere.transform.position = pos;
-
-        yield return new WaitForSeconds(1);
-
-        Destroy (sphere);
     }
 
     void OnGUI()

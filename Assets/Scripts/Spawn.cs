@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     public Transform spawnPoint;
-    public GameObject player;
+    public GameObject player; 
 
     private void Start()
     {
@@ -14,7 +14,14 @@ public class Spawn : MonoBehaviour
 
     public void Respawn()
     {
-        Instantiate(player, spawnPoint.position, spawnPoint.rotation);
+
+        float respawnNumber = Random.Range(0, 7f);
+        int respawnInt = Mathf.RoundToInt(respawnNumber);
+
+        Debug.Log(respawnNumber);
+
+        Instantiate(player, this.gameObject.transform.GetChild(respawnInt));
+
     }
 }
 

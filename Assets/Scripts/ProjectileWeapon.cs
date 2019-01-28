@@ -17,7 +17,7 @@ public class ProjectileWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonUp("Fire1"))
+        if(Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
@@ -25,7 +25,7 @@ public class ProjectileWeapon : MonoBehaviour
 
     void Shoot()
     {
-        AudioManager.instance.PlaySound("Sound_Launcher");
+         AudioManager.instance.PlaySound("Sound_Launcher");
         Rigidbody shot = Instantiate(projectile, shotPos.position, shotPos.rotation) as Rigidbody;
         shot.AddForce(shotPos.forward * shotForce);
     }
