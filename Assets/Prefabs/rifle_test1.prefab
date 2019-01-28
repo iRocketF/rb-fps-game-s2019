@@ -11,6 +11,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: rifle_test1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
+      propertyPath: m_Name
+      value: handle1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
+      propertyPath: m_Name
+      value: sight1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
+      propertyPath: m_Name
+      value: sight2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
+      propertyPath: m_Name
+      value: trigger1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
+      propertyPath: m_Name
+      value: stock1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
+      propertyPath: m_Name
+      value: barrel1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
+      propertyPath: m_Name
+      value: stock2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
+      propertyPath: m_Name
+      value: grip1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
+      propertyPath: m_Name
+      value: magazine1
+      objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.7671037
@@ -55,10 +91,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -170.11601
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
+    - target: {fileID: 2300018, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 65bb80686a60d4a42a4780ea768e80ee, type: 2}
+    - target: {fileID: 2300000, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ccd428f727583d9409cd25c808f79c6d, type: 2}
     - target: {fileID: 2300002, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -88,10 +128,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 65bb80686a60d4a42a4780ea768e80ee, type: 2}
     - target: {fileID: 2300016, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 65bb80686a60d4a42a4780ea768e80ee, type: 2}
-    - target: {fileID: 2300018, guid: 1ef034772f2c11b45ae5629d26e834fc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 65bb80686a60d4a42a4780ea768e80ee, type: 2}
