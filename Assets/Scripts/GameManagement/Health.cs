@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-
+    public GameObject player;
     public float health = 50f;
     public float maxhealth = 100f;
     public GameObject spawner;
 
+    public void Start()
+    {
+        player = this.gameObject;
+    }
     public void Update()
     {
         if(health >= maxhealth)
@@ -37,7 +41,11 @@ public class Health : MonoBehaviour
     {
         
         //ShaderGraph here
+        //Give a point/kill/round to the killer
+
         Debug.Log("Player death...");
-        Destroy(this.gameObject);
+        health = maxhealth;
+        gameObject.GetComponent<TestSpawn>().TestRespawn(player); ;
+
     }
 }
