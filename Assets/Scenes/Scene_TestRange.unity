@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 69360212}
   m_Layer: 0
   m_Name: playerdummy (3)
-  m_TagString: Player
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,9 +264,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ebde4831d3b3459775ef8ce57cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 50
   maxhealth: 100
-  spawner: {fileID: 0}
 --- !u!136 &69360213
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 162801254}
   m_Layer: 0
   m_Name: playerdummy (2)
-  m_TagString: Player
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -477,9 +477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ebde4831d3b3459775ef8ce57cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 50
   maxhealth: 100
-  spawner: {fileID: 0}
 --- !u!136 &162801255
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1047,7 +1047,7 @@ GameObject:
   - component: {fileID: 397159034}
   m_Layer: 0
   m_Name: playerdummy (1)
-  m_TagString: Player
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1078,9 +1078,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ebde4831d3b3459775ef8ce57cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 50
   maxhealth: 100
-  spawner: {fileID: 0}
 --- !u!136 &397159035
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1246,7 +1246,7 @@ GameObject:
   - component: {fileID: 457549565}
   m_Layer: 0
   m_Name: playerdummy (9)
-  m_TagString: Player
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1277,9 +1277,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ebde4831d3b3459775ef8ce57cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 50
   maxhealth: 100
-  spawner: {fileID: 0}
 --- !u!136 &457549566
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1693,7 +1693,7 @@ GameObject:
   - component: {fileID: 777708099}
   m_Layer: 0
   m_Name: playerdummy (8)
-  m_TagString: Player
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1724,9 +1724,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ebde4831d3b3459775ef8ce57cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 50
   maxhealth: 100
-  spawner: {fileID: 0}
 --- !u!136 &777708100
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1976,9 +1976,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ebde4831d3b3459775ef8ce57cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 50
   maxhealth: 100
-  spawner: {fileID: 0}
 --- !u!136 &910739820
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2053,7 +2053,7 @@ GameObject:
   - component: {fileID: 910739819}
   m_Layer: 0
   m_Name: playerdummy (7)
-  m_TagString: Player
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2074,7 +2074,7 @@ GameObject:
   - component: {fileID: 983201050}
   m_Layer: 0
   m_Name: moving_playerdummy (8)
-  m_TagString: Player
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2123,9 +2123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ebde4831d3b3459775ef8ce57cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 50
   maxhealth: 100
-  spawner: {fileID: 0}
 --- !u!136 &983201052
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3010,7 +3010,7 @@ GameObject:
   - component: {fileID: 1551903263}
   m_Layer: 0
   m_Name: playerdummy (12)
-  m_TagString: Player
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3041,9 +3041,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ebde4831d3b3459775ef8ce57cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 50
   maxhealth: 100
-  spawner: {fileID: 0}
 --- !u!136 &1551903264
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3587,7 +3587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d55934194e82e4f9e8c3ab5b5c047f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 1206519362}
   player: {fileID: 1142961048568904, guid: cf08566c5f685a14f8a378f348dd6777, type: 3}
 --- !u!4 &1724204271
 Transform:
@@ -3839,7 +3838,7 @@ GameObject:
   - component: {fileID: 1786043461}
   m_Layer: 0
   m_Name: playerdummy (5)
-  m_TagString: Player
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3870,9 +3869,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ebde4831d3b3459775ef8ce57cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 50
   maxhealth: 100
-  spawner: {fileID: 0}
 --- !u!136 &1786043462
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3977,7 +3976,7 @@ GameObject:
   - component: {fileID: 1812537228}
   m_Layer: 0
   m_Name: playerdummy (10)
-  m_TagString: Player
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4008,9 +4007,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ebde4831d3b3459775ef8ce57cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 50
   maxhealth: 100
-  spawner: {fileID: 0}
 --- !u!136 &1812537229
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4268,7 +4267,7 @@ GameObject:
   - component: {fileID: 1884305355}
   m_Layer: 0
   m_Name: playerdummy (6)
-  m_TagString: Player
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4299,9 +4298,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ebde4831d3b3459775ef8ce57cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 50
   maxhealth: 100
-  spawner: {fileID: 0}
 --- !u!136 &1884305356
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4468,7 +4467,7 @@ GameObject:
   - component: {fileID: 1957567150}
   m_Layer: 0
   m_Name: moving_playerdummy (7)
-  m_TagString: Player
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4517,9 +4516,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ebde4831d3b3459775ef8ce57cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 50
   maxhealth: 100
-  spawner: {fileID: 0}
 --- !u!136 &1957567152
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4745,7 +4744,7 @@ GameObject:
   - component: {fileID: 2025977704}
   m_Layer: 0
   m_Name: playerdummy (4)
-  m_TagString: Player
+  m_TagString: Dummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4776,9 +4775,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992ebde4831d3b3459775ef8ce57cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 50
   maxhealth: 100
-  spawner: {fileID: 0}
 --- !u!136 &2025977705
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4958,6 +4957,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: playerdummy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508642339960921592, guid: c2c5161faab2abd4a97ea9b4832d1976,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dummy
       objectReference: {fileID: 0}
     - target: {fileID: 7508642339960921571, guid: c2c5161faab2abd4a97ea9b4832d1976,
         type: 3}
