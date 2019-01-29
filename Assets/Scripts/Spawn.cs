@@ -15,7 +15,7 @@ public class Spawn : MonoBehaviour
     public void Respawn()
     {
 
-        float respawnNumber = Random.Range(0, 7f);
+        float respawnNumber = Random.Range(0, transform.childCount);
         int respawnInt = Mathf.RoundToInt(respawnNumber);
 
         Debug.Log(respawnNumber);
