@@ -9,7 +9,10 @@ public class DeathBoxTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        hp = other.gameObject.GetComponent<Health>();
-        hp.TakeDamage(damage);
+        if(other.gameObject.CompareTag("Player"))
+        {
+            hp = other.gameObject.GetComponent<Health>();
+            hp.TakeDamage(damage);
+        }
     }
 }
