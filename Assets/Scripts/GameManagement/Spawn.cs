@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public Transform spawnPoint;
     public GameObject player; 
 
     private void Start()
     {
-        Respawn();
+        MapSpawn();
     }
 
-    public void Respawn()
+    public void MapSpawn()
     {
 
         float respawnNumber = Random.Range(0, transform.childCount);
@@ -21,6 +20,18 @@ public class Spawn : MonoBehaviour
         Debug.Log(respawnNumber);
 
         Instantiate(player, this.gameObject.transform.GetChild(respawnInt));
+
+    }
+
+    public void Respawn(GameObject player)
+    {
+
+        float respawnNumber = Random.Range(0, transform.childCount);
+        int respawnInt = Mathf.RoundToInt(respawnNumber);
+
+        Debug.Log(respawnNumber);
+
+        player.transform.position = this.gameObject.transform.GetChild(respawnInt).position;
 
     }
 }

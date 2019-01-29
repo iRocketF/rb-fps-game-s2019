@@ -7,7 +7,6 @@ public class Health : MonoBehaviour
     public GameObject player;
     public float health = 50f;
     public float maxhealth = 100f;
-    public GameObject spawner;
 
     public void Start()
     {
@@ -45,7 +44,8 @@ public class Health : MonoBehaviour
 
         Debug.Log("Player death...");
         health = maxhealth;
-        gameObject.GetComponent<TestSpawn>().TestRespawn(player); ;
+
+        player.GetComponent<Spawn>().Respawn(player);
 
     }
 }
