@@ -45,7 +45,7 @@ public class Health : MonoBehaviour
         Debug.Log("Player death...");
         health = maxhealth;
 
-        player.GetComponent<Spawn>().Respawn(player);
-
+        //player.GetComponent<Spawn>().Respawn(player);
+        
     }
 }
