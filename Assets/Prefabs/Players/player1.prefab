@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &3989508962130679885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69a5f5ec8a9e8649b8f5e8b03391a0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 4098735537973139811, guid: 8aca7230e38fff54d97dbdfa0579e409,
+    type: 3}
+  shotPos: {fileID: 7201391888004913627}
+  shotForce: 2000
 --- !u!1 &1142961048568904
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,8 +28,8 @@ GameObject:
   - component: {fileID: 33954818799638570}
   - component: {fileID: 23062758311289700}
   - component: {fileID: 143271598042030280}
-  - component: {fileID: 2680722847112696231}
-  - component: {fileID: 114545079483445186}
+  - component: {fileID: 694288202586157867}
+  - component: {fileID: 7527009096983319204}
   - component: {fileID: 405611978}
   m_Layer: 0
   m_Name: player1
@@ -100,7 +116,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2680722847112696231
+--- !u!114 &694288202586157867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1142961048568904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2832475c39535f647a1f2133babebacb, type: 3}
+  m_Script: {fileID: 11500000, guid: 33559ed81fff4684d91b4a7162065510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
@@ -117,7 +133,7 @@ MonoBehaviour:
   gravity: 20
   maxBlinkLength: 4
   blinkDirection: {x: 0, y: 0, z: 0}
---- !u!114 &114545079483445186
+--- !u!114 &7527009096983319204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,14 +142,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1142961048568904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 144ccde2465f326419e257825bed35cc, type: 3}
+  m_Script: {fileID: 11500000, guid: f777a3c9dca9be047b0f754d4317c29c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 1
-  minimumVert: -70
-  maximumVert: 70
-  sensHorizontal: 10
-  sensVertical: 10
+  minimumVert: -90
+  maximumVert: 90
+  sensHorizontal: 8
+  sensVertical: 8
   _rotationX: 0
 --- !u!114 &405611978
 MonoBehaviour:
@@ -163,6 +179,7 @@ GameObject:
   - component: {fileID: 4312385712672396}
   - component: {fileID: 20440700886115344}
   - component: {fileID: 114431673297983600}
+  - component: {fileID: 8368051665609350508}
   m_Layer: 0
   m_Name: Player POV
   m_TagString: Player
@@ -234,7 +251,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622741784763604}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 144ccde2465f326419e257825bed35cc, type: 3}
   m_Name: 
@@ -245,7 +262,25 @@ MonoBehaviour:
   sensHorizontal: 10
   sensVertical: 10
   _rotationX: 0
---- !u!114 &5936823197723476402
+--- !u!114 &8368051665609350508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622741784763604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f777a3c9dca9be047b0f754d4317c29c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 2
+  minimumVert: -90
+  maximumVert: 90
+  sensHorizontal: 6
+  sensVertical: 6
+  _rotationX: 0
+--- !u!114 &2414092168618075679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,7 +289,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1071973760208397677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47400127b2ed7204fa4439a39b244134, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a3a6d840704de9468a4a39ff35dfde5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerCam: {fileID: 0}
@@ -262,7 +297,7 @@ MonoBehaviour:
   player: {fileID: 0}
   damage: 10
   range: 0
-  fireRate: 10
+  fireRate: 15
 --- !u!1 &2545981046410422594
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,11 +507,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: launcher
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6301093746923013533, guid: d5efeac287fc42b478e0f1588384cbca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d5efeac287fc42b478e0f1588384cbca, type: 3}
+--- !u!1 &100004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7201391886709120040, guid: d5efeac287fc42b478e0f1588384cbca,
+    type: 3}
+  m_PrefabInstance: {fileID: 7201391886709086860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &400004 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7201391886708949000, guid: d5efeac287fc42b478e0f1588384cbca,
+    type: 3}
+  m_PrefabInstance: {fileID: 7201391886709086860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7201391888004913627 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1397048151, guid: d5efeac287fc42b478e0f1588384cbca,
     type: 3}
   m_PrefabInstance: {fileID: 7201391886709086860}
   m_PrefabAsset: {fileID: 0}
