@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 33954818799638570}
   - component: {fileID: 23062758311289700}
   - component: {fileID: 143271598042030280}
-  - component: {fileID: 114819752453209080}
+  - component: {fileID: 2680722847112696231}
   - component: {fileID: 114545079483445186}
   - component: {fileID: 405611978}
   m_Layer: 0
-  m_Name: KBMPlayer
+  m_Name: player1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114819752453209080
+--- !u!114 &2680722847112696231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,13 +109,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1142961048568904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c4cd9fa0e7256a459b3a0b288b1ed7d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2832475c39535f647a1f2133babebacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
   jumpSpeed: 8
   gravity: 20
-  maxBlinkLength: 7
+  maxBlinkLength: 4
   blinkDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &114545079483445186
 MonoBehaviour:

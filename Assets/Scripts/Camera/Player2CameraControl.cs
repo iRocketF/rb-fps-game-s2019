@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControllerCameraControl : MonoBehaviour {
+public class Player2CameraControl : MonoBehaviour {
 
 	public enum RotationAxis
     {

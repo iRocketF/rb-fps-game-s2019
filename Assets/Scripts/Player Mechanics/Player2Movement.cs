@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class Player2Movement : MonoBehaviour {
 
     public float speed = 8.0f;
     public float jumpSpeed = 8.0f;
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if (controller.collisionFlags == CollisionFlags.Below || controller.isGrounded)
         {
-            if(Input.GetButton("Jump"))
+            if(Input.GetButton("Jump_Gamepad2"))
             {
                 jumpVelocity = jumpSpeed;
             } else {
@@ -33,20 +33,21 @@ public class PlayerMovement : MonoBehaviour {
             jumpVelocity -= gravity * Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2_Gamepad2"))
         {
             Blink();
         }
 
-        moveDirection = new Vector3(Input.GetAxis("Horizontal") * speed, jumpVelocity, Input.GetAxis("Vertical") * speed);
+        moveDirection = new Vector3(Input.GetAxis("Horizontal_Gamepad2") * speed, jumpVelocity, Input.GetAxis("Vertical_Gamepad2") * speed);
         moveDirection = transform.TransformDirection(moveDirection);
         controller.Move(moveDirection * Time.deltaTime);
 
 	}
 
-    void Blink() {
+    void Blink()
+    {
 
-        blinkDirection = transform.forward * Input.GetAxis("Vertical") + transform.right * Input.GetAxis("Horizontal");
+        blinkDirection = transform.forward * Input.GetAxis("Vertical_Gamepad2") + transform.right * Input.GetAxis("Horizontal_Gamepad2");
         blinkDirection.y = 0;
         blinkDirection.Normalize();
         float blinkLength = maxBlinkLength;
