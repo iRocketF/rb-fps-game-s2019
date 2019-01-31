@@ -90,8 +90,8 @@ MonoBehaviour:
   axes: 2
   minimumVert: -90
   maximumVert: 90
-  sensHorizontal: 50
-  sensVertical: 50
+  sensHorizontal: 6
+  sensVertical: 6
   _rotationX: 0
 --- !u!1 &1843671918146072
 GameObject:
@@ -225,8 +225,8 @@ MonoBehaviour:
   axes: 1
   minimumVert: -90
   maximumVert: 90
-  sensHorizontal: 50
-  sensVertical: 50
+  sensHorizontal: 8
+  sensVertical: 8
   _rotationX: 0
 --- !u!114 &4805893467971016695
 MonoBehaviour:
@@ -245,7 +245,23 @@ MonoBehaviour:
     type: 3}
   health: 100
   maxhealth: 100
---- !u!114 &4805903645990168732
+--- !u!114 &331995667405784396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3679833016169518623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68f5abee437b9fd46b15ec88797c00f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 4098735537973139811, guid: 8aca7230e38fff54d97dbdfa0579e409,
+    type: 3}
+  shotPos: {fileID: 5827973914892028256}
+  shotForce: 2000
+--- !u!114 &3520347817717874207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,7 +270,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4531925732891605594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47400127b2ed7204fa4439a39b244134, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a2d214f61fbc3744a00fbc8cfd4daed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerCam: {fileID: 0}
@@ -262,7 +278,7 @@ MonoBehaviour:
   player: {fileID: 0}
   damage: 10
   range: 0
-  fireRate: 10
+  fireRate: 15
 --- !u!1 &8981467485873647882
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,11 +392,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: launcher
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6301093746923013533, guid: d5efeac287fc42b478e0f1588384cbca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d5efeac287fc42b478e0f1588384cbca, type: 3}
+--- !u!1 &3679833016169518623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7201391886709120040, guid: d5efeac287fc42b478e0f1588384cbca,
+    type: 3}
+  m_PrefabInstance: {fileID: 5827973914099485239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3679833016169810495 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7201391886708949000, guid: d5efeac287fc42b478e0f1588384cbca,
+    type: 3}
+  m_PrefabInstance: {fileID: 5827973914099485239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5827973914892028256 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1397048151, guid: d5efeac287fc42b478e0f1588384cbca,
     type: 3}
   m_PrefabInstance: {fileID: 5827973914099485239}
   m_PrefabAsset: {fileID: 0}
