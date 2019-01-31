@@ -5,7 +5,9 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public GameObject player;
-    public float health = 50f;
+    public GameObject spawnhandler;
+
+    public float health = 100f;
     public float maxhealth = 100f;
 
     public void Start()
@@ -45,7 +47,7 @@ public class Health : MonoBehaviour
         Debug.Log("Player death...");
         health = maxhealth;
 
-        //player.GetComponent<Spawn>().Respawn(player);
+        spawnhandler.GetComponent<Spawn>().Respawn(player);
         
     }
 }
