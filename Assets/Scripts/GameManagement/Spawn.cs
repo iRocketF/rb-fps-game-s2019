@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public GameObject player; 
+    public GameObject player1;
+    public GameObject player2;
 
     private void Start()
     {
@@ -17,9 +18,13 @@ public class Spawn : MonoBehaviour
         float respawnNumber = Random.Range(0, transform.childCount);
         int respawnInt = Mathf.RoundToInt(respawnNumber);
 
-        Debug.Log(respawnNumber);
+        Instantiate(player1, this.gameObject.transform.GetChild(respawnInt));
 
-        Instantiate(player, this.gameObject.transform.GetChild(respawnInt));
+        respawnNumber = Random.Range(0, transform.childCount);
+        respawnInt = Mathf.RoundToInt(respawnNumber);
+
+        Instantiate(player2, this.gameObject.transform.GetChild(respawnInt));
+
 
     }
 
