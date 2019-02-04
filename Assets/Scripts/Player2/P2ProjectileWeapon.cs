@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileWeaponPlayer2 : MonoBehaviour
+public class P2ProjectileWeapon : MonoBehaviour
 {
     public Rigidbody projectile;
     public Transform shotPos;

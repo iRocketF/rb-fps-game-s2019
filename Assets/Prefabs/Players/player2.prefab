@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4834569099205650}
   - component: {fileID: 20288976176408068}
-  - component: {fileID: 114135541326600668}
+  - component: {fileID: 6538259242446427973}
   m_Layer: 0
   m_Name: Player POV
   m_TagString: Untagged
@@ -75,7 +75,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &114135541326600668
+--- !u!114 &6538259242446427973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1394271202464316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490cbfbce436440408dc162d2eebe0a8, type: 3}
+  m_Script: {fileID: 11500000, guid: e804c0075d6786c499f411429eac2802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 2
@@ -105,9 +105,9 @@ GameObject:
   - component: {fileID: 33534616418598622}
   - component: {fileID: 23256336896169662}
   - component: {fileID: 143647909862527654}
-  - component: {fileID: 8225841959596627356}
-  - component: {fileID: 114899232642963910}
   - component: {fileID: 4805893467971016695}
+  - component: {fileID: 6790052020434290878}
+  - component: {fileID: 855082587235472479}
   m_Layer: 0
   m_Name: player2
   m_TagString: Player
@@ -193,41 +193,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8225841959596627356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843671918146072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5009e9e548016ca43a73505e3c4ef50c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  jumpSpeed: 8
-  gravity: 20
-  maxBlinkLength: 4
-  blinkDirection: {x: 0, y: 0, z: 0}
---- !u!114 &114899232642963910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843671918146072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490cbfbce436440408dc162d2eebe0a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axes: 1
-  minimumVert: -90
-  maximumVert: 90
-  sensHorizontal: 8
-  sensVertical: 8
-  _rotationX: 0
 --- !u!114 &4805893467971016695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +210,42 @@ MonoBehaviour:
     type: 3}
   health: 100
   maxhealth: 100
---- !u!114 &331995667405784396
+--- !u!114 &6790052020434290878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843671918146072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7cb3eb3dbe2244aba6048dd30d6de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  jumpSpeed: 8
+  gravity: 20
+  maxBlinkLength: 4
+  blinkDirection: {x: 0, y: 0, z: 0}
+--- !u!114 &855082587235472479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843671918146072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e804c0075d6786c499f411429eac2802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 1
+  minimumVert: -90
+  maximumVert: 90
+  sensHorizontal: 8
+  sensVertical: 8
+  _rotationX: 0
+--- !u!114 &6569123371478571330
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,14 +254,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3679833016169518623}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68f5abee437b9fd46b15ec88797c00f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 09bd67b6f2f9dbb428efd66bab14b7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 4098735537973139811, guid: 8aca7230e38fff54d97dbdfa0579e409,
     type: 3}
   shotPos: {fileID: 5827973914892028256}
   shotForce: 2000
---- !u!114 &3520347817717874207
+--- !u!114 &366806040206718019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4531925732891605594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a2d214f61fbc3744a00fbc8cfd4daed, type: 3}
+  m_Script: {fileID: 11500000, guid: b05014e17087f5549aa4b7b4e75553ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerCam: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7636427662280704069}
-  - component: {fileID: 820071958684220190}
+  - component: {fileID: 8873287677255591341}
   m_Layer: 0
   m_Name: Weaponhandler
   m_TagString: Untagged
@@ -312,7 +312,7 @@ Transform:
   m_Father: {fileID: 4834569099205650}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &820071958684220190
+--- !u!114 &8873287677255591341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8981467485873647882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c752d55a91b3e9d4a8720ca775af2dfc, type: 3}
+  m_Script: {fileID: 11500000, guid: 463dc6ef4755703488fd91513cce5582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selectedWeapon: 0
@@ -332,6 +332,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7636427662280704069}
     m_Modifications:
+    - target: {fileID: 7201391886709120040, guid: d5efeac287fc42b478e0f1588384cbca,
+        type: 3}
+      propertyPath: m_Name
+      value: launcher
+      objectReference: {fileID: 0}
     - target: {fileID: 7201391886708949000, guid: d5efeac287fc42b478e0f1588384cbca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -386,11 +391,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7201391886709120040, guid: d5efeac287fc42b478e0f1588384cbca,
-        type: 3}
-      propertyPath: m_Name
-      value: launcher
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6301093746923013533, guid: d5efeac287fc42b478e0f1588384cbca, type: 3}
