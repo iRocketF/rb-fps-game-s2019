@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class InputManager
+/* public static class InputManager
 {
     public static bool AButton()
     {
@@ -21,4 +21,4 @@ public static class InputManager
         return Input.GetButtonDown("A_Button");
     }
     
-}
+} */
