@@ -1,14 +1,32 @@
 fileFormatVersion: 2
-guid: 34dbdc64e379e3146ad06525b912be42
+guid: f7ebcdcabc1fd3248bbf738da76ca1b2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: white
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Circle
+    100000: Camera
+    100002: Circle
+    100004: Circle.001
+    100006: Lamp
+    100008: //RootNode
+    400000: Camera
+    400002: Circle
+    400004: Circle.001
+    400006: Lamp
+    400008: //RootNode
+    2000000: Camera
+    2100000: Material
+    2100002: Material.001
+    2100004: No Name
+    2100006: white
+    2300000: Circle
+    2300002: Circle.001
+    2300004: //RootNode
+    3300000: Circle
+    3300002: Circle.001
+    3300004: //RootNode
+    4300000: Circle.001
+    4300002: Circle
+    10800000: Lamp
   externalObjects: {}
   materials:
     importMaterials: 1

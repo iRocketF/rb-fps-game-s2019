@@ -46,13 +46,5 @@ public class P1HitScanWeapon : MonoBehaviour
             }
         }
     }
-
-    void OnGUI()
-    {
-        int size = 12;
-        float posX = playerCam.pixelWidth / 2 - size / 4;
-        float posY = playerCam.pixelHeight / 2 - size / 2;
-        GUI.Label(new Rect(posX, posY, size, size), "*");
-    }
 }
 
