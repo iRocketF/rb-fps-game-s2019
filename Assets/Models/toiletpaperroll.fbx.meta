@@ -17,10 +17,13 @@ ModelImporter:
     2100000: Material
     2100002: Material.001
     2100004: No Name
+    2100006: white
     2300000: Circle
     2300002: Circle.001
+    2300004: //RootNode
     3300000: Circle
     3300002: Circle.001
+    3300004: //RootNode
     4300000: Circle.001
     4300002: Circle
     10800000: Lamp
@@ -61,8 +64,8 @@ ModelImporter:
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
