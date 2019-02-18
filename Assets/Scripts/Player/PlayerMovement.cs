@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class P1Movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 
     public float speed = 8.0f;
@@ -10,11 +10,22 @@ public class P1Movement : MonoBehaviour
     public float gravity = 20.0f;
     public float maxBlinkLength = 4.0f;
     public Vector3 blinkDirection;
+    public int playerNumber;
 
     private float jumpVelocity = 0.0f;
     private Vector3 moveDirection = Vector3.zero;
     private RaycastHit hit;
 
+    private string jumpString = "Jump_Gamepad", blinkString = "Fire2_Gamepad", horString = "Horizontal_Gamepad", verString = "Vertical_Gamepad";
+
+    private void Start()
+    {
+        jumpString += playerNumber;
+        blinkString += playerNumber;
+        horString += playerNumber;
+        verString += playerNumber;
+ 
+    }
 
     // Update is called once per frame
     void Update()
@@ -23,7 +34,7 @@ public class P1Movement : MonoBehaviour
 
         if (controller.collisionFlags == CollisionFlags.Below || controller.isGrounded)
         {
-            if (Input.GetButton("Jump_Gamepad1"))
+            if (Input.GetButton(jumpString))
             {
                 jumpVelocity = jumpSpeed;
             }
@@ -38,12 +49,12 @@ public class P1Movement : MonoBehaviour
             jumpVelocity -= gravity * Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Fire2_Gamepad1"))
+        if (Input.GetButtonDown(blinkString))
         {
             Blink();
         }
 
-        moveDirection = new Vector3(Input.GetAxis("Horizontal_Gamepad1") * speed, jumpVelocity, Input.GetAxis("Vertical_Gamepad1") * speed);
+        moveDirection = new Vector3(Input.GetAxis(horString) * speed, jumpVelocity, Input.GetAxis(verString) * speed);
         moveDirection = transform.TransformDirection(moveDirection);
         controller.Move(moveDirection * Time.deltaTime);
 
@@ -52,7 +63,7 @@ public class P1Movement : MonoBehaviour
     void Blink()
     {
 
-        blinkDirection = transform.forward * Input.GetAxis("Vertical_Gamepad1") + transform.right * Input.GetAxis("Horizontal_Gamepad1");
+        blinkDirection = transform.forward * Input.GetAxis(verString) + transform.right * Input.GetAxis(horString);
         blinkDirection.y = 0;
         blinkDirection.Normalize();
         float blinkLength = maxBlinkLength;

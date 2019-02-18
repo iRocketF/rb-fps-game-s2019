@@ -12,7 +12,17 @@ public class HealthPickUp : MonoBehaviour {
         // ParticleSystem
         hp = other.gameObject.GetComponent<Health>();
         hp.IncreaseHealth(healAmount);
-  
-        Destroy(gameObject);
+
+        gameObject.SetActive(false);
+
+        StartCoroutine(Respawn());
+
+    }
+
+    private IEnumerator Respawn()
+    {
+        Debug.Log("Health cooldown 15 sec...");
+        yield return new WaitForSeconds(15);
+        gameObject.SetActive(true);
     }
 }

@@ -2,27 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class P2HitScanWeapon : MonoBehaviour
+public class HitScanWeapon : MonoBehaviour
 {
-
-    public Camera playerCam;
-    public GameObject hitObject;
-    public Transform player;
-
+    public int playerNumber;
     public float damage = 10f;
     public float range;
     public float fireRate = 15f;
 
     private float nextTimeToFire = 0f;
+    private string fireString = "Fire1_Gamepad";
+    private Camera playerCam;
+    private GameObject hitObject;
+    private Transform player;
+
     void Start()
     {
         player = GetComponentInParent<Transform>();
         playerCam = GetComponentInParent<Camera>();
+        fireString += playerNumber;
     }
 
     void Update()
     {
-        if (Input.GetButton("Fire1_Gamepad2") && Time.time >= nextTimeToFire)
+        if (Input.GetAxis("Fire1_Gamepad1") > 0.5f && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();

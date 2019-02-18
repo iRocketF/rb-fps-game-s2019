@@ -2,24 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class P1ProjectileWeapon : MonoBehaviour
+public class ProjectileWeapon : MonoBehaviour
 {
+    public int playerNumber;
     public Rigidbody projectile;
     public Transform shotPos;
     public float shotForce = 1000f;
 
+    private bool rtPressed = false;
+    private string fireString = "Fire1_Gamepad";
+
     // Start is called before the first frame update
     void Start()
     {
-
+        fireString += playerNumber;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1_Gamepad1"))
+        if (!rtPressed && Input.GetAxis(fireString) > 0.5f)
         {
             Shoot();
+            rtPressed = true;
+        }
+
+        if (Input.GetAxis(fireString) < 0.2)
+        {
+            rtPressed = false;
         }
     }
 

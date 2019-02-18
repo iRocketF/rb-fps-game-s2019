@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponSwitch : MonoBehaviour
+public class KBMWeaponSwitch : MonoBehaviour
 {
     public int selectedWeapon = 0;
 

@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class P1HitScanWeapon : MonoBehaviour
-{
+public class KBMHitScanWeapon : MonoBehaviour {
 
     public Camera playerCam;
     public GameObject hitObject;
@@ -22,8 +21,7 @@ public class P1HitScanWeapon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Fire1_Gamepad1") && Time.time >= nextTimeToFire)
-        {
+        if(Input.GetButton("Fire1") && Time.time >= nextTimeToFire){
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
         }
@@ -47,4 +45,3 @@ public class P1HitScanWeapon : MonoBehaviour
         }
     }
 }
-

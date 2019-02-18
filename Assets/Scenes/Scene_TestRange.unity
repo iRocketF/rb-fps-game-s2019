@@ -3019,6 +3019,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnHandler
       objectReference: {fileID: 0}
+    - target: {fileID: 515948178185334087, guid: fb877669038c1a84cb4eded99a4e7e69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 515948178185334085, guid: fb877669038c1a84cb4eded99a4e7e69,
         type: 3}
       propertyPath: m_LocalPosition.x
