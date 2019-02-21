@@ -9,17 +9,21 @@ public class BarbecueBeam : MonoBehaviour
     public float range;
     public float fireRate = 0.5f;
 
+    private bool rtPressed = false;
     private float nextTimeToFire = 0f;
     private Camera playerCam;
     private Transform player;
     private GameObject hitObject;
-    private string fireString = "Fire_Gamepad";
+    private ParticleSystem laser;
+    private string fireString = "Fire1_Gamepad";
+
 
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponentInParent<Transform>();
         playerCam = GetComponentInParent<Camera>();
+        laser = GetComponentInParent<ParticleSystem>();
 
         fireString += playerNumber;
     }
@@ -28,18 +32,29 @@ public class BarbecueBeam : MonoBehaviour
     void Update()
     {
         {
-            if (Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
+            if (!rtPressed && Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
             {
+                rtPressed = true;
                 nextTimeToFire = Time.time + 1f / fireRate;
-                Shoot();
+                StartCoroutine(Shoot());
+  
+            }
+
+            if (Input.GetAxis(fireString) < 0.2f)
+            {
+                rtPressed = false;
             }
         }
 
     }
 
-    void Shoot()
+    IEnumerator Shoot()
     {
-        AudioManager.instance.PlaySound("Sound_Shot");
+        
+        AudioManager.instance.PlaySound("Sound_Bbq_Charge");
+        yield return new WaitForSeconds(2);
+
+        AudioManager.instance.PlaySound("Sound_Bbq_Shot");
 
         RaycastHit hit;
 
