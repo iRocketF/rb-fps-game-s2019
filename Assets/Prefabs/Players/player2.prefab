@@ -497,10 +497,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 2
-  projectile: {fileID: 3085395518884154401, guid: 1e237bd4c08ade44b9eb266d158abcca,
+  projectile: {fileID: 4098735537973139811, guid: 8aca7230e38fff54d97dbdfa0579e409,
     type: 3}
   shotPos: {fileID: 1513618952126795744}
-  shotForce: 1000
+  shotForce: 2000
 --- !u!1 &8981467485873647882
 GameObject:
   m_ObjectHideFlags: 0
