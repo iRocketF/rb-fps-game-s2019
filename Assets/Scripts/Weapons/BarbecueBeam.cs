@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class BarbecueBeam : MonoBehaviour
 {
     public int playerNumber;
@@ -14,16 +15,18 @@ public class BarbecueBeam : MonoBehaviour
     private Camera playerCam;
     private Transform player;
     private GameObject hitObject;
-    private ParticleSystem laser;
+    public ParticleSystem laser;
+    public ParticleSystem beam;
     private string fireString = "Fire1_Gamepad";
 
 
     // Start is called before the first frame update
     void Start()
     {
+
         player = GetComponentInParent<Transform>();
         playerCam = GetComponentInParent<Camera>();
-        laser = GetComponentInParent<ParticleSystem>();
+        laser = GetComponentInChildren<ParticleSystem>();
 
         fireString += playerNumber;
     }
@@ -50,11 +53,16 @@ public class BarbecueBeam : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        
+
+        laser.Play();
         AudioManager.instance.PlaySound("Sound_Bbq_Charge");
         yield return new WaitForSeconds(2);
+        laser.Stop();
 
+        beam.Play();
         AudioManager.instance.PlaySound("Sound_Bbq_Shot");
+        yield return new WaitForSeconds(1);
+        beam.Stop();
 
         RaycastHit hit;
 
