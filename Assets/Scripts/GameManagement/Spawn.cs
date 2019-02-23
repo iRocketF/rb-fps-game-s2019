@@ -34,7 +34,6 @@ public class Spawn : MonoBehaviour
         float respawnNumber = Random.Range(0, transform.childCount);
         int respawnInt = Mathf.RoundToInt(respawnNumber);
 
-        Debug.Log(respawnNumber);
 
         player.transform.position = this.gameObject.transform.GetChild(respawnInt).position;
 

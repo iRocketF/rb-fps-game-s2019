@@ -44,7 +44,6 @@ public class Health : MonoBehaviour
         //ShaderGraph here
         //Give a point/kill/round to the killer
 
-        Debug.Log("Player death...");
         health = maxhealth;
 
         spawnhandler.GetComponent<Spawn>().Respawn(player);

@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public int playerNumber;
 
     public float speed = 8.0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
+
     public float maxBlinkLength = 4.0f;
     public Vector3 blinkDirection;
-    public int playerNumber;
+    public int maxBlinks;
+    public int currentBlinks;
+    public bool blinksFull;
+    public float blinkCoolDown;
+    public float nextBlinkTimer;
 
     private float jumpVelocity = 0.0f;
     private Vector3 moveDirection = Vector3.zero;
@@ -24,7 +30,11 @@ public class PlayerMovement : MonoBehaviour
         blinkString += playerNumber;
         horString += playerNumber;
         verString += playerNumber;
- 
+
+        maxBlinks = 3;
+        currentBlinks = maxBlinks;
+        blinkCoolDown = 3;
+
     }
 
     // Update is called once per frame
@@ -32,25 +42,21 @@ public class PlayerMovement : MonoBehaviour
     {
         CharacterController controller = GetComponent<CharacterController>();
 
+
         if (controller.collisionFlags == CollisionFlags.Below || controller.isGrounded)
         {
             if (Input.GetButton(jumpString))
             {
                 jumpVelocity = jumpSpeed;
-            }
-            else
-            {
+            } else {
                 jumpVelocity = 0;
             }
-
         }
-        else
-        {
+        else {
             jumpVelocity -= gravity * Time.deltaTime;
         }
 
-        if (Input.GetButtonDown(blinkString))
-        {
+        if (Input.GetButtonDown(blinkString)) {
             Blink();
         }
 
@@ -58,6 +64,20 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = transform.TransformDirection(moveDirection);
         controller.Move(moveDirection * Time.deltaTime);
 
+        if(currentBlinks == maxBlinks) {
+            blinksFull = true;
+        } else {
+            blinksFull = false;
+        }
+
+        
+        if (!blinksFull) {
+            nextBlinkTimer += Time.deltaTime;
+            if (nextBlinkTimer > blinkCoolDown) {
+                currentBlinks++;
+                nextBlinkTimer = 0;
+            }
+        }
     }
 
     void Blink()
@@ -68,12 +88,13 @@ public class PlayerMovement : MonoBehaviour
         blinkDirection.Normalize();
         float blinkLength = maxBlinkLength;
 
-        if (Physics.Raycast(transform.position, blinkDirection, out hit, blinkLength))
-        {
+        if (currentBlinks > 0) { 
+        if (Physics.Raycast(transform.position, blinkDirection, out hit, blinkLength)) {
             blinkLength = hit.distance;
+            }
+            transform.position = transform.position + (blinkDirection * blinkLength);
+            currentBlinks--;
         }
-
-        transform.position = transform.position + (blinkDirection * blinkLength);
     }
 }
 

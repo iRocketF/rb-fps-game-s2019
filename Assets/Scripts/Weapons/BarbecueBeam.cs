@@ -60,11 +60,10 @@ public class BarbecueBeam : MonoBehaviour
         laser.Stop();
 
         beam.Play();
-        AudioManager.instance.PlaySound("Sound_Bbq_Shot");
-        yield return new WaitForSeconds(1);
-        beam.Stop();
 
         RaycastHit hit;
+
+        AudioManager.instance.PlaySound("Sound_Bbq_Shot");
 
         if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit))
         {
@@ -76,5 +75,8 @@ public class BarbecueBeam : MonoBehaviour
                 target.TakeDamage(damage);
             }
         }
+        yield return new WaitForSeconds(0.25f);
+        beam.Stop();
+
     }
 }
