@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class HealthPickUp : MonoBehaviour {
 
-    public float healAmount = 25f;
+    public float healAmount = 50f;
     public Health hp;
+    public PickUpSpawner spawner;
+
+    private void Start()
+    {
+        
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,16 +19,9 @@ public class HealthPickUp : MonoBehaviour {
         hp = other.gameObject.GetComponent<Health>();
         hp.IncreaseHealth(healAmount);
 
+        spawner = gameObject.GetComponentInParent<PickUpSpawner>();
+
         gameObject.SetActive(false);
 
-        StartCoroutine(Respawn());
-
-    }
-
-    private IEnumerator Respawn()
-    {
-        Debug.Log("Health cooldown 15 sec...");
-        yield return new WaitForSeconds(15);
-        gameObject.SetActive(true);
     }
 }

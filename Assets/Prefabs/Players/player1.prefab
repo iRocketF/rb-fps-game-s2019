@@ -112,12 +112,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1878af0e9f7f844beb793c7359dd1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 1
   speed: 8
   jumpSpeed: 8
   gravity: 20
   maxBlinkLength: 4
   blinkDirection: {x: 0, y: 0, z: 0}
-  playerNumber: 1
+  maxBlinks: 0
+  currentBlinks: 0
+  blinksFull: 0
+  blinkCoolDown: 0
+  nextBlinkTimer: 0
 --- !u!114 &7510089479714998196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,8 +139,8 @@ MonoBehaviour:
   axes: 1
   minimumVert: -90
   maximumVert: 90
-  sensHorizontal: 6
-  sensVertical: 6
+  sensHorizontal: 2
+  sensVertical: 2
   _rotationX: 0
 --- !u!114 &405611978
 MonoBehaviour:
@@ -246,8 +251,8 @@ MonoBehaviour:
   axes: 2
   minimumVert: -90
   maximumVert: 90
-  sensHorizontal: 4
-  sensVertical: 4
+  sensHorizontal: 1
+  sensVertical: 1
   _rotationX: 0
 --- !u!1 &381770643823546399
 GameObject:
@@ -552,6 +557,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4689923880046390434}
     m_Modifications:
+    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
+        type: 3}
+      propertyPath: m_Name
+      value: tp_launcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4243108820557886433, guid: 7a3f737c680db5b4698e5748457aef9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -607,16 +622,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
-        type: 3}
-      propertyPath: m_Name
-      value: tp_launcher
-      objectReference: {fileID: 0}
-    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a3f737c680db5b4698e5748457aef9e, type: 3}
 --- !u!4 &400002 stripped
@@ -632,6 +637,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4689923880046390434}
     m_Modifications:
+    - target: {fileID: 6686507069702829496, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
+        type: 3}
+      propertyPath: m_Name
+      value: barbecuebeam2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686507069702829496, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6686507069702531480, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -701,16 +716,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.29999998
-      objectReference: {fileID: 0}
-    - target: {fileID: 6686507069702829496, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
-        type: 3}
-      propertyPath: m_Name
-      value: barbecuebeam2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6686507069702829496, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9078221517610725686, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
         type: 3}

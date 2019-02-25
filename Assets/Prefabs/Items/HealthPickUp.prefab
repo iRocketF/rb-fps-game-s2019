@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 114851288011434836}
   - component: {fileID: 8488494016658755197}
   m_Layer: 0
-  m_Name: Pick Up
+  m_Name: HealthPickUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,4 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 25
+  resCoolDown: 15
+  resTimer: 0
   hp: {fileID: 0}
+  spawner: {fileID: 4520557257240143261, guid: ac91fc9bfa613d444b1b314de9fd3041, type: 3}

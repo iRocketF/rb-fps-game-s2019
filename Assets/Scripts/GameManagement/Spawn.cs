@@ -24,8 +24,6 @@ public class Spawn : MonoBehaviour
         respawnInt = Mathf.RoundToInt(respawnNumber);
 
         Instantiate(player2, this.gameObject.transform.GetChild(respawnInt));
-
-
     }
 
     public void Respawn(GameObject player)
