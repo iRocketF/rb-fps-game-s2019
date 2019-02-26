@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class MainMenuButtons : MonoBehaviour
 {
+    
     public GameObject settings;
     public bool options;
 
@@ -29,6 +30,14 @@ public class MainMenuButtons : MonoBehaviour
     foreach (Transform child in transform)     
     {  
         child.gameObject.SetActive(false);   
-    }   
-}
-}
+        }   
+    }
+    public void EnableChildren() {
+        foreach (Transform child in transform)     
+    {  
+        child.gameObject.SetActive(true);   
+        }   
+    }
+
+    }
+
