@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class OptionsScript : MonoBehaviour
 {
-    public GameObject mainMenu;
     public AudioMixer audioMixer;
     public void SetVolume (float volume) {
         audioMixer.SetFloat("volume", volume);
     }
 
     public void BackButton() {
-        mainMenu.EnableChildren();
+     SceneManager.LoadScene(1);
     }
 }
