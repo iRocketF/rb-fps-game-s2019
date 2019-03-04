@@ -34,10 +34,10 @@ public class CntrlCameraControl : MonoBehaviour {
     void Update () {
         if(axes == RotationAxis.JoystickX)
         {
-            transform.Rotate (0, Input.GetAxis(joyXstring) * sensHorizontal, 0);
+            transform.Rotate (0, Input.GetAxis(joyXstring) * sensHorizontal * Time.deltaTime, 0);
         } else if(axes == RotationAxis.JoystickY)
         {
-            _rotationX -= Input.GetAxis(joyYstring) * sensVertical;
+            _rotationX -= Input.GetAxis(joyYstring) * sensVertical * Time.deltaTime;
             _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert); // pitää vertikaalisen kulman min ja max rajojen sisällä
 
             float rotationY = transform.localEulerAngles.y;

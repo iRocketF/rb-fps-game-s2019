@@ -91,8 +91,8 @@ MonoBehaviour:
   axes: 2
   minimumVert: -90
   maximumVert: 90
-  sensHorizontal: 3
-  sensVertical: 3
+  sensHorizontal: 200
+  sensVertical: 200
   _rotationX: 0
 --- !u!1 &1843671918146072
 GameObject:
@@ -251,8 +251,8 @@ MonoBehaviour:
   axes: 1
   minimumVert: -90
   maximumVert: 90
-  sensHorizontal: 4
-  sensVertical: 4
+  sensHorizontal: 100
+  sensVertical: 100
   _rotationX: 0
 --- !u!1 &39065883999085814
 GameObject:
