@@ -647,16 +647,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4689923880046390434}
     m_Modifications:
-    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
-        type: 3}
-      propertyPath: m_Name
-      value: tp_launcher
-      objectReference: {fileID: 0}
-    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4243108820557886433, guid: 7a3f737c680db5b4698e5748457aef9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -712,6 +702,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
+        type: 3}
+      propertyPath: m_Name
+      value: tp_launcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a3f737c680db5b4698e5748457aef9e, type: 3}
 --- !u!4 &400002 stripped
@@ -727,11 +727,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4689923880046390434}
     m_Modifications:
-    - target: {fileID: 6686507069702829496, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
-        type: 3}
-      propertyPath: m_Name
-      value: barbecuebeam2
-      objectReference: {fileID: 0}
     - target: {fileID: 6686507069702531480, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -786,6 +781,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686507069702829496, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
+        type: 3}
+      propertyPath: m_Name
+      value: barbecuebeam2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c75fd30f9d2a27418fe534f93a0aba7, type: 3}
