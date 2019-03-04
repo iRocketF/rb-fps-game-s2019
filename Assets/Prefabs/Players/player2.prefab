@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 8724719104328620940}
   - component: {fileID: 3047684094150875890}
   - component: {fileID: 1249999981478581184}
+  - component: {fileID: 6370174772169820873}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -285,6 +286,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 7967917641736060000}
+  - {fileID: 524494613012380778}
   m_Father: {fileID: 4221960064973318}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -353,6 +355,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6370174772169820873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39065883999085814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d90c58c95a67649bdfa143936da533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpBar: {fileID: 4212953423489632217}
+  hp: {fileID: 4805893467971016695}
 --- !u!1 &659631919163810906
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +489,80 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!1 &4113352746150021877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524494613012380778}
+  - component: {fileID: 4769681044108788978}
+  - component: {fileID: 4212953423489632217}
+  m_Layer: 5
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &524494613012380778
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113352746150021877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 6, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5585790277758081395}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 150, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4769681044108788978
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113352746150021877}
+  m_CullTransparentMesh: 0
+--- !u!114 &4212953423489632217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113352746150021877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.11449838, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 957e53378f2dd0d47aa0e4f306bf196a, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 1
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
 --- !u!114 &516482196729521060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,6 +635,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7636427662280704069}
     m_Modifications:
+    - target: {fileID: 6686507069702829496, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
+        type: 3}
+      propertyPath: m_Name
+      value: barbecuebeam2
+      objectReference: {fileID: 0}
     - target: {fileID: 6686507069702531480, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -615,11 +710,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.29999998
       objectReference: {fileID: 0}
-    - target: {fileID: 6686507069702829496, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
-        type: 3}
-      propertyPath: m_Name
-      value: barbecuebeam2
-      objectReference: {fileID: 0}
     - target: {fileID: 9078221517610725686, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
         type: 3}
       propertyPath: playerNumber
@@ -640,6 +730,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7636427662280704069}
     m_Modifications:
+    - target: {fileID: 100002, guid: 654348cedbbd6464f8bd796739bcc992, type: 3}
+      propertyPath: m_Name
+      value: vegetableshooter
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 654348cedbbd6464f8bd796739bcc992, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.209
@@ -696,10 +790,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.0019999999
       objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 654348cedbbd6464f8bd796739bcc992, type: 3}
-      propertyPath: m_Name
-      value: vegetableshooter
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 654348cedbbd6464f8bd796739bcc992, type: 3}
 --- !u!1 &2280656398236664340 stripped
@@ -721,6 +811,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7636427662280704069}
     m_Modifications:
+    - target: {fileID: 100002, guid: e1880e8b4c74fc4439129df4acd8ca75, type: 3}
+      propertyPath: m_Name
+      value: tp_launcher
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e1880e8b4c74fc4439129df4acd8ca75, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.243
@@ -776,10 +870,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: e1880e8b4c74fc4439129df4acd8ca75, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0010000009
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: e1880e8b4c74fc4439129df4acd8ca75, type: 3}
-      propertyPath: m_Name
-      value: tp_launcher
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: e1880e8b4c74fc4439129df4acd8ca75, type: 3}
       propertyPath: m_Enabled
