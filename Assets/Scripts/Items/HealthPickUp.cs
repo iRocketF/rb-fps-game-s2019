@@ -16,6 +16,7 @@ public class HealthPickUp : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         // ParticleSystem
+        AudioManager.instance.PlaySound("Sound_pickUp");
         hp = other.gameObject.GetComponent<Health>();
         hp.IncreaseHealth(healAmount);
 

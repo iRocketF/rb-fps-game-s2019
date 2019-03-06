@@ -92,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         if (Physics.Raycast(transform.position, blinkDirection, out hit, blinkLength)) {
             blinkLength = hit.distance;
             }
+            AudioManager.instance.PlaySound("Sound_blink");
             transform.position = transform.position + (blinkDirection * blinkLength);
             currentBlinks--;
         }

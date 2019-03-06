@@ -24,7 +24,7 @@ public class HitScanWeapon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetAxis("Fire1_Gamepad1") > 0.5f && Time.time >= nextTimeToFire)
+        if (Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();

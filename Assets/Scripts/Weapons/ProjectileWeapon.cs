@@ -8,21 +8,22 @@ public class ProjectileWeapon : MonoBehaviour
     public Rigidbody projectile;
     public Transform shotPos;
     public float shotForce = 1000f;
+    public float fireRate = 1f;
 
+    private float nextTimetoFire;
     private bool rtPressed = false;
     private string fireString = "Fire1_Gamepad";
 
-    // Start is called before the first frame update
     void Start()
     {
         fireString += playerNumber;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (!rtPressed && Input.GetAxis(fireString) > 0.5f)
+        if (!rtPressed && Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimetoFire)
         {
+            nextTimetoFire = Time.time + 1f / fireRate;
             Shoot();
             rtPressed = true;
         }
