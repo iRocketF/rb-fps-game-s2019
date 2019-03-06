@@ -8,7 +8,9 @@ public class HitScanWeapon : MonoBehaviour
     public float damage = 10f;
     public float range;
     public float fireRate = 15f;
+    public WeaponAmmo ammo;
 
+    private bool rtPressed = false;
     private float nextTimeToFire = 0f;
     private string fireString = "Fire1_Gamepad";
     private Camera playerCam;
@@ -17,6 +19,7 @@ public class HitScanWeapon : MonoBehaviour
 
     void Start()
     {
+        ammo = GetComponent<WeaponAmmo>();
         player = GetComponentInParent<Transform>();
         playerCam = GetComponentInParent<Camera>();
         fireString += playerNumber;
@@ -24,11 +27,29 @@ public class HitScanWeapon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
+
+        if (ammo.currentAmmo > 0)
         {
-            nextTimeToFire = Time.time + 1f / fireRate;
-            Shoot();
+            if (Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
+            {
+                nextTimeToFire = Time.time + 1f / fireRate;
+                ammo.currentAmmo--;
+                Shoot();
+            } 
         }
+        else if (ammo.currentAmmo == 0)
+        {
+            if (!rtPressed && Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
+            {
+                rtPressed = true;
+                AudioManager.instance.PlaySound("sound_ammoEmpty");
+            }
+            if (Input.GetAxis(fireString) < 0.2)
+            {
+                rtPressed = false;
+            }
+        }
+
     }
 
     void Shoot()

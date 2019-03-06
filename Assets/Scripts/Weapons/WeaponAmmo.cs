@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class WeaponAmmo : MonoBehaviour
 {
-    public int maxAmmo;
-    public int currentAmmo;
+    public float maxAmmo;
+    public float currentAmmo;
 
     void Start()
     {
-        if (currentAmmo == -1)
+        if (currentAmmo <= 0)
         {
             currentAmmo = maxAmmo;
         }
@@ -17,6 +17,14 @@ public class WeaponAmmo : MonoBehaviour
 
     void Update()
     {
-        
+        if (currentAmmo >= maxAmmo)
+        {
+            currentAmmo = maxAmmo;
+        }
+    }
+
+    public void IncreaseAmmo(float amount)
+    {
+        currentAmmo += amount;
     }
 }

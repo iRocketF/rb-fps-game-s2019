@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3127708635299199421}
   - component: {fileID: 2186118348060167035}
+  - component: {fileID: 7292397128785369223}
   m_Layer: 0
   m_Name: vegetableshooter
   m_TagString: Untagged
@@ -45,9 +46,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
-  damage: 10
+  damage: 5
   range: 0
-  fireRate: 15
+  fireRate: 10
+  ammo: {fileID: 0}
+--- !u!114 &7292397128785369223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3127708635298899357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a488cd85769c7e04aa3a1c637af52365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxAmmo: 100
+  currentAmmo: 0
 --- !u!1 &3127708635298899359
 GameObject:
   m_ObjectHideFlags: 0
