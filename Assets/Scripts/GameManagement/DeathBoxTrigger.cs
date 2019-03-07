@@ -14,5 +14,9 @@ public class DeathBoxTrigger : MonoBehaviour
             hp = other.gameObject.GetComponent<Health>();
             hp.TakeDamage(damage);
         }
+        if(other.gameObject.CompareTag("Projectile"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

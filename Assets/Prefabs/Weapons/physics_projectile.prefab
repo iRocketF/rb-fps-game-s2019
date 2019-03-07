@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8261733967456037089}
   m_Layer: 0
   m_Name: physics_projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
