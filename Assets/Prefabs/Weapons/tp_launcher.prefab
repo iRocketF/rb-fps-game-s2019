@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
-  projectile: {fileID: 4098735537973139811, guid: 8aca7230e38fff54d97dbdfa0579e409,
+  projectile: {fileID: 7487242897213065241, guid: fda84a7a43e48c740ab29e08e895d77d,
     type: 3}
   shotPos: {fileID: 8943980365095532415}
   shotForce: 2000
