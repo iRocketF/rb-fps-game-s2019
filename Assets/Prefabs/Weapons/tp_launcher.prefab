@@ -87,6 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4243108820557886433}
   - component: {fileID: 9066429448146935325}
+  - component: {fileID: 8803044034397868795}
   m_Layer: 0
   m_Name: tp_launcher
   m_TagString: Untagged
@@ -127,6 +128,22 @@ MonoBehaviour:
     type: 3}
   shotPos: {fileID: 8943980365095532415}
   shotForce: 2000
+  fireRate: 2
+  ammo: {fileID: 0}
+--- !u!114 &8803044034397868795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4243108820557656001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a488cd85769c7e04aa3a1c637af52365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxAmmo: 20
+  currentAmmo: 0
 --- !u!1 &8102366547770010907
 GameObject:
   m_ObjectHideFlags: 0

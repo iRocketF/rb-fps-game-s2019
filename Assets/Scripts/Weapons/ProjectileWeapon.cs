@@ -8,29 +8,49 @@ public class ProjectileWeapon : MonoBehaviour
     public Rigidbody projectile;
     public Transform shotPos;
     public float shotForce = 1000f;
+    public float fireRate = 1f;
+    public WeaponAmmo ammo;
 
+    private float nextTimeToFire;
     private bool rtPressed = false;
     private string fireString = "Fire1_Gamepad";
 
-    // Start is called before the first frame update
     void Start()
     {
+        ammo = GetComponent<WeaponAmmo>();
         fireString += playerNumber;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (!rtPressed && Input.GetAxis(fireString) > 0.5f)
-        {
-            Shoot();
-            rtPressed = true;
-        }
 
-        if (Input.GetAxis(fireString) < 0.2)
+        if (ammo.currentAmmo > 0)
         {
-            rtPressed = false;
+            if (!rtPressed && Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
+            {
+                rtPressed = true;
+                nextTimeToFire = Time.time + 1f / fireRate;
+                ammo.currentAmmo--;
+                Shoot();
+            }
+
+            if (Input.GetAxis(fireString) < 0.2)
+            {
+                rtPressed = false;
+            }
+        } else if (ammo.currentAmmo == 0)
+        {
+            if (!rtPressed && Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
+            {
+                rtPressed = true;
+                AudioManager.instance.PlaySound("sound_ammoEmpty");
+            }
+            if (Input.GetAxis(fireString) < 0.2)
+            {
+                rtPressed = false;
+            }
         }
+        
     }
 
     void Shoot()

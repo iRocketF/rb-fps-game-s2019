@@ -9532,6 +9532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6686507069702531480}
   - component: {fileID: 9078221517610725686}
+  - component: {fileID: 7085657093182505104}
   m_Layer: 0
   m_Name: barbecuebeam2
   m_TagString: Untagged
@@ -9573,8 +9574,23 @@ MonoBehaviour:
   damage: 100
   range: 0
   fireRate: 0.5
+  ammo: {fileID: 0}
   laser: {fileID: 6008196407433233154}
   beam: {fileID: 7450949363210045519}
+--- !u!114 &7085657093182505104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686507069702829496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a488cd85769c7e04aa3a1c637af52365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxAmmo: 6
+  currentAmmo: 0
 --- !u!1 &6686507069702829498
 GameObject:
   m_ObjectHideFlags: 0
