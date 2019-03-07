@@ -26,57 +26,48 @@ public class HitScanWeapon : MonoBehaviour
     }
 
     void Update()
-
     {
-        if (Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
+
+        if (ammo.currentAmmo > 0)
         {
-            nextTimeToFire = Time.time + 1f / fireRate;
-            Shoot();
+            if (Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
+            {
+                nextTimeToFire = Time.time + 1f / fireRate;
+                ammo.currentAmmo--;
+                Shoot();
+            } 
+        }
+        else if (ammo.currentAmmo == 0)
+        {
+            if (!rtPressed && Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
+            {
+                rtPressed = true;
+                AudioManager.instance.PlaySound("sound_ammoEmpty");
+            }
+            if (Input.GetAxis(fireString) < 0.2)
+            {
+                rtPressed = false;
+            }
         }
 
-        {
-
-            if (ammo.currentAmmo > 0)
-            {
-                if (Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
-                {
-                    nextTimeToFire = Time.time + 1f / fireRate;
-                    ammo.currentAmmo--;
-                    Shoot();
-                }
-            }
-            else if (ammo.currentAmmo == 0)
-            {
-                if (!rtPressed && Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
-                {
-                    rtPressed = true;
-                    AudioManager.instance.PlaySound("sound_ammoEmpty");
-                }
-                if (Input.GetAxis(fireString) < 0.2)
-                {
-                    rtPressed = false;
-                }
-            }
-
-        }
     }
- 
-        void Shoot()
+
+    void Shoot()
+    {
+        AudioManager.instance.PlaySound("Sound_Shot");
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit))
         {
-            AudioManager.instance.PlaySound("Sound_Shot");
+            hitObject = hit.transform.gameObject;
+            Health target = hitObject.GetComponent<Health>();
 
-            RaycastHit hit;
-
-            if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit))
+            if (target != null)
             {
-                hitObject = hit.transform.gameObject;
-                Health target = hitObject.GetComponent<Health>();
-
-                if (target != null)
-                {
-                    target.TakeDamage(damage);
-                }
+                target.TakeDamage(damage);
             }
         }
     }
+}
 
