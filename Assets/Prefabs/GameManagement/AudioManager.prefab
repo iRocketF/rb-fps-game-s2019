@@ -51,59 +51,59 @@ MonoBehaviour:
     randomVolume: 0
     randomPitch: 0
   - name: Sound_Launcher
-    clip: {fileID: 8300000, guid: 1cdb8b5a0060aec41b8ed0b12e7bee0d, type: 3}
+    clip: {fileID: 8300000, guid: 394885811d4e2c3438d6c190ca9be689, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0
     randomPitch: 0
   - name: Sound_Bbq_Charge
-    clip: {fileID: 8300000, guid: 048727e702e8b41439fd03623cdefe17, type: 3}
+    clip: {fileID: 8300000, guid: a2c59e451e65c9c4ea970fb54a9c9157, type: 3}
     volume: 0.75
     pitch: 1
     randomVolume: 0
     randomPitch: 0
   - name: Sound_Bbq_Shot
-    clip: {fileID: 8300000, guid: 5c64dec1781b1254face6ce1846e2c64, type: 3}
+    clip: {fileID: 8300000, guid: bccc0336876fa9a45968b4cf0888e95a, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0
     randomPitch: 0
   - name: Sound_pickUp
-    clip: {fileID: 8300000, guid: 7f74b80818ec2914980d92be199a7abb, type: 3}
+    clip: {fileID: 8300000, guid: 4b4d18a1ae48f0e479016c08defaa420, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0
     randomPitch: 0
   - name: Sound_blink
-    clip: {fileID: 8300000, guid: 86ea799e0d891524db5010aa81ebf147, type: 3}
+    clip: {fileID: 8300000, guid: 2afe7de4938440a4ea3e268ac60e40f2, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0
     randomPitch: 0.5
   - name: Sound_ammoPickUp
-    clip: {fileID: 8300000, guid: 735958cb54accb343954a2fa5e13c8f8, type: 3}
+    clip: {fileID: 8300000, guid: 31e30c2d58aa6d94bab251b2bb4bf4c0, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0
     randomPitch: 0
   - name: sound_ammoEmpty
-    clip: {fileID: 8300000, guid: 404cfb3f848a49e429838b407005c255, type: 3}
+    clip: {fileID: 8300000, guid: e2bf951f7acf1fe449e4e73195f2ca54, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0
     randomPitch: 0
   - name: sound_ammoEmptyBbq
-    clip: {fileID: 8300000, guid: e385b3714c38a284d96357cc7b8a294f, type: 3}
+    clip: {fileID: 8300000, guid: ab0319a3e36f32e46af186d1602d5e66, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0
     randomPitch: 0
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: sound_playerImpact
+    clip: {fileID: 8300000, guid: 290cedf27b2870d4fad0e1900243b8ec, type: 3}
+    volume: 1
+    pitch: 1
     randomVolume: 0
-    randomPitch: 0
+    randomPitch: 0.5
   - name: 
     clip: {fileID: 0}
     volume: 0

@@ -24,6 +24,7 @@ public class ProjectileStats : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            AudioManager.instance.PlaySound("sound_playerImpact");
             hp = collision.gameObject.GetComponent<Health>();
             hp.TakeDamage(damage);
         }

@@ -85,6 +85,7 @@ public class BarbecueBeam : MonoBehaviour
         {
             hitObject = hit.transform.gameObject;
             Health target = hitObject.GetComponent<Health>();
+            AudioManager.instance.PlaySound("sound_playerImpact");
 
             if (target != null)
             {

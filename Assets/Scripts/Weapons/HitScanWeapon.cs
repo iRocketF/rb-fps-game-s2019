@@ -82,6 +82,7 @@ public class HitScanWeapon : MonoBehaviour
 
             if (target != null)
             {
+                AudioManager.instance.PlaySound("sound_playerImpact");
                 target.TakeDamage(damage);
             }
         }
