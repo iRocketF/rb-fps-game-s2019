@@ -326,7 +326,7 @@ PrefabInstance:
     - target: {fileID: 3127708635299199421, guid: ae5023c22dd82b74e83b6a75291339df,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.32599998
+      value: -0.326
       objectReference: {fileID: 0}
     - target: {fileID: 3127708635299199421, guid: ae5023c22dd82b74e83b6a75291339df,
         type: 3}
@@ -336,7 +336,7 @@ PrefabInstance:
     - target: {fileID: 3127708635299199421, guid: ae5023c22dd82b74e83b6a75291339df,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3127708635299199421, guid: ae5023c22dd82b74e83b6a75291339df,
         type: 3}
@@ -346,7 +346,7 @@ PrefabInstance:
     - target: {fileID: 3127708635299199421, guid: ae5023c22dd82b74e83b6a75291339df,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3127708635299199421, guid: ae5023c22dd82b74e83b6a75291339df,
         type: 3}
@@ -496,6 +496,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: barbecuebeam2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686507069702829496, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6686507069702531480, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
         type: 3}

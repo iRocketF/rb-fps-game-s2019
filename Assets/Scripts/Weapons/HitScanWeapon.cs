@@ -9,8 +9,10 @@ public class HitScanWeapon : MonoBehaviour
     public float range;
     public float fireRate = 15f;
     public WeaponAmmo ammo;
+    public Animator animator;
 
     private bool rtPressed = false;
+    private bool isShooting = false;
     private float nextTimeToFire = 0f;
     private string fireString = "Fire1_Gamepad";
     private Camera playerCam;
@@ -32,22 +34,37 @@ public class HitScanWeapon : MonoBehaviour
         {
             if (Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
             {
+                rtPressed = true;
+                isShooting = true;
                 nextTimeToFire = Time.time + 1f / fireRate;
                 ammo.currentAmmo--;
                 Shoot();
-            } 
+            } if(Input.GetAxis(fireString) < 0.2)
+            {
+                isShooting = false;
+                rtPressed = false;
+            }
         }
         else if (ammo.currentAmmo == 0)
         {
             if (!rtPressed && Input.GetAxis(fireString) > 0.5f && Time.time >= nextTimeToFire)
             {
                 rtPressed = true;
+                isShooting = false;
                 AudioManager.instance.PlaySound("sound_ammoEmpty");
             }
             if (Input.GetAxis(fireString) < 0.2)
             {
+                isShooting = false;
                 rtPressed = false;
             }
+        }
+
+        if(isShooting)
+        {
+            animator.SetBool("isShooting", true);
+        } else {
+            animator.SetBool("isShooting", false);
         }
 
     }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3127708635299199421}
   - component: {fileID: 2186118348060167035}
   - component: {fileID: 7292397128785369223}
+  - component: {fileID: 9169436915111633993}
   m_Layer: 0
   m_Name: vegetableshooter
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
   range: 0
   fireRate: 10
   ammo: {fileID: 0}
+  animator: {fileID: 9169436915111633993}
 --- !u!114 &7292397128785369223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +66,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxAmmo: 100
   currentAmmo: 0
+--- !u!95 &9169436915111633993
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3127708635298899357}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35ffa6e8864d2cd4390eea87f027c685, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3127708635298899359
 GameObject:
   m_ObjectHideFlags: 0
