@@ -10,6 +10,8 @@ public class HitScanWeapon : MonoBehaviour
     public float fireRate = 15f;
     public WeaponAmmo ammo;
     public Animator animator;
+    public ParticleSystem hitParticle_env;
+    public ParticleSystem hitParticle_player;
 
     private bool rtPressed = false;
     private bool isShooting = false;
@@ -82,8 +84,11 @@ public class HitScanWeapon : MonoBehaviour
 
             if (target != null)
             {
+                Instantiate(hitParticle_player, hit.point, Quaternion.LookRotation(hit.normal));
                 AudioManager.instance.PlaySound("sound_playerImpact");
                 target.TakeDamage(damage);
+            } else{
+                Instantiate(hitParticle_env, hit.point, Quaternion.LookRotation(hit.normal));
             }
         }
     }

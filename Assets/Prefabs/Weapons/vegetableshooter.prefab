@@ -52,6 +52,10 @@ MonoBehaviour:
   fireRate: 10
   ammo: {fileID: 0}
   animator: {fileID: 9169436915111633993}
+  hitParticle_env: {fileID: 1918886407081583998, guid: 69ac343d91a1f2f41bf956716dd992a0,
+    type: 3}
+  hitParticle_player: {fileID: 1918886407081583998, guid: 54ebabe23e514374a9cb49b4e7e55aea,
+    type: 3}
 --- !u!114 &7292397128785369223
 MonoBehaviour:
   m_ObjectHideFlags: 0
