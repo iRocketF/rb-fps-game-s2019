@@ -232,6 +232,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1843671918146072}
   spawnhandler: {fileID: 0}
+  wpAmmoBbq: {fileID: 7582478290582077046}
+  wpAmmoVege: {fileID: 4094784907023102203}
+  wpAmmoTP: {fileID: 4952308485257591247}
   health: 100
   maxhealth: 100
 --- !u!114 &4833137430822293117
@@ -580,11 +583,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7636427662280704069}
     m_Modifications:
-    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
-        type: 3}
-      propertyPath: m_Name
-      value: tp_launcher
-      objectReference: {fileID: 0}
     - target: {fileID: 4243108820557886433, guid: 7a3f737c680db5b4698e5748457aef9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -649,6 +647,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0010000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
+        type: 3}
+      propertyPath: m_Name
+      value: tp_launcher
       objectReference: {fileID: 0}
     - target: {fileID: 9066429448146935325, guid: 7a3f737c680db5b4698e5748457aef9e,
         type: 3}

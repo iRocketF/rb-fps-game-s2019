@@ -6,6 +6,12 @@ public class Health : MonoBehaviour
 {
     public GameObject player;
     public GameObject spawnhandler;
+    [HideInInspector]
+    public WeaponAmmo wpAmmoBbq;
+    [HideInInspector]
+    public WeaponAmmo wpAmmoVege;
+    [HideInInspector]
+    public WeaponAmmo wpAmmoTP;
 
     public float health = 100f;
     public float maxhealth = 100f;
@@ -46,6 +52,10 @@ public class Health : MonoBehaviour
         //Give a point/kill/round to the killer
 
         health = maxhealth;
+        wpAmmoBbq.currentAmmo = wpAmmoBbq.maxAmmo;
+        wpAmmoTP.currentAmmo = wpAmmoTP.maxAmmo;
+        wpAmmoVege.currentAmmo = wpAmmoVege.maxAmmo;
+
 
         spawnhandler.GetComponent<Spawn>().Respawn(player);
         
