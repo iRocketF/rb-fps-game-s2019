@@ -6,6 +6,9 @@ public class Spawn : MonoBehaviour
 {
     public GameObject player1;
     public GameObject player2;
+    float respawnNumber;
+    int respawnInt;
+    int lastRespawnInt;
 
     private void Start()
     {
@@ -15,13 +18,21 @@ public class Spawn : MonoBehaviour
     public void MapSpawn()
     {
 
-        float respawnNumber = Random.Range(0, transform.childCount);
-        int respawnInt = Mathf.RoundToInt(respawnNumber);
+        respawnNumber = Random.Range(0, transform.childCount);
+        respawnInt = Mathf.RoundToInt(respawnNumber);
 
         Instantiate(player1, this.gameObject.transform.GetChild(respawnInt));
 
+        lastRespawnInt = respawnInt;
+
         respawnNumber = Random.Range(0, transform.childCount);
         respawnInt = Mathf.RoundToInt(respawnNumber);
+
+        if(respawnInt == lastRespawnInt)
+        {
+            respawnNumber = Random.Range(0, transform.childCount);
+            respawnInt = Mathf.RoundToInt(respawnNumber);
+        }
 
         Instantiate(player2, this.gameObject.transform.GetChild(respawnInt));
     }
@@ -29,8 +40,8 @@ public class Spawn : MonoBehaviour
     public void Respawn(GameObject player)
     {
 
-        float respawnNumber = Random.Range(0, transform.childCount);
-        int respawnInt = Mathf.RoundToInt(respawnNumber);
+        respawnNumber = Random.Range(0, transform.childCount);
+        respawnInt = Mathf.RoundToInt(respawnNumber);
 
 
         player.transform.position = this.gameObject.transform.GetChild(respawnInt).position;

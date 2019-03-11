@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     public void Start()
     {
         player = this.gameObject;
+        spawnhandler = GameObject.Find("SpawnHandler");
     }
     public void Update()
     {

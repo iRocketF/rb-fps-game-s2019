@@ -156,8 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1142961048568904}
-  spawnhandler: {fileID: 515948178185334087, guid: fb877669038c1a84cb4eded99a4e7e69,
-    type: 3}
+  spawnhandler: {fileID: 0}
   health: 100
   maxhealth: 100
 --- !u!1 &1622741784763604
@@ -396,6 +395,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4689923880046390434}
     m_Modifications:
+    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
+        type: 3}
+      propertyPath: m_Name
+      value: tp_launcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4243108820557886433, guid: 7a3f737c680db5b4698e5748457aef9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -450,16 +459,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
-        type: 3}
-      propertyPath: m_Name
-      value: tp_launcher
-      objectReference: {fileID: 0}
-    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a3f737c680db5b4698e5748457aef9e, type: 3}
@@ -685,11 +684,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8962349704700955275, guid: 7e45e6addc3532b4084c5263c479465a,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 20440700886115344}
     - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
         type: 3}
       propertyPath: hp
@@ -720,6 +714,11 @@ PrefabInstance:
       propertyPath: wpSwitch
       value: 
       objectReference: {fileID: 2428346345968709557}
+    - target: {fileID: 8962349704700955275, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 20440700886115344}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e45e6addc3532b4084c5263c479465a, type: 3}
 --- !u!224 &2093670871097730399 stripped
