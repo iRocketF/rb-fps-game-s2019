@@ -12,7 +12,10 @@ public class Health : MonoBehaviour
     public WeaponAmmo wpAmmoVege;
     [HideInInspector]
     public WeaponAmmo wpAmmoTP;
+    public PlayerMovement pMov;
 
+
+    public int playerNum;
     public float health = 100f;
     public float maxhealth = 100f;
 
@@ -47,14 +50,17 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        
+
         //ShaderGraph here
         //Give a point/kill/round to the killer
+
+        GameManager.instance.GivePoint(playerNum);
 
         health = maxhealth;
         wpAmmoBbq.currentAmmo = wpAmmoBbq.maxAmmo;
         wpAmmoTP.currentAmmo = wpAmmoTP.maxAmmo;
         wpAmmoVege.currentAmmo = wpAmmoVege.maxAmmo;
+        pMov.currentBlinks = pMov.maxBlinks;
 
 
         spawnhandler.GetComponent<Spawn>().Respawn(player);

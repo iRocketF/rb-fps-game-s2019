@@ -160,6 +160,8 @@ MonoBehaviour:
   wpAmmoBbq: {fileID: 2509464485692192567}
   wpAmmoVege: {fileID: 5644161401271139256}
   wpAmmoTP: {fileID: 4668048175997909912}
+  pMov: {fileID: 3134991323797803007}
+  playerNum: 1
   health: 100
   maxhealth: 100
 --- !u!1 &1622741784763604
@@ -722,6 +724,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 20440700886115344}
+    - target: {fileID: 1851669189629731779, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.276e-12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851669189629731779, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 695.45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e45e6addc3532b4084c5263c479465a, type: 3}
 --- !u!224 &2093670871097730399 stripped

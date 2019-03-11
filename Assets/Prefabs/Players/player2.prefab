@@ -235,6 +235,8 @@ MonoBehaviour:
   wpAmmoBbq: {fileID: 7582478290582077046}
   wpAmmoVege: {fileID: 4094784907023102203}
   wpAmmoTP: {fileID: 4952308485257591247}
+  pMov: {fileID: 4449229642647396789}
+  playerNum: 2
   health: 100
   maxhealth: 100
 --- !u!114 &4833137430822293117
