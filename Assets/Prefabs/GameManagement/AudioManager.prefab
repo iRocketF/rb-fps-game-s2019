@@ -104,12 +104,12 @@ MonoBehaviour:
     pitch: 1
     randomVolume: 0
     randomPitch: 0.5
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: sound_tp_impact
+    clip: {fileID: 8300000, guid: a923d97720a852f479840d486c859966, type: 3}
+    volume: 0.5
+    pitch: 1
     randomVolume: 0
-    randomPitch: 0
+    randomPitch: 1
   - name: 
     clip: {fileID: 0}
     volume: 0

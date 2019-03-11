@@ -8,6 +8,7 @@ TagManager:
   - PickUp
   - PickUpSpawner
   - Projectile
+  - Environment
   layers:
   - Default
   - TransparentFX

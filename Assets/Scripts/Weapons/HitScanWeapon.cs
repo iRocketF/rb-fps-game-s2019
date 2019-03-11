@@ -87,7 +87,7 @@ public class HitScanWeapon : MonoBehaviour
                 Instantiate(hitParticle_player, hit.point, Quaternion.LookRotation(hit.normal));
                 AudioManager.instance.PlaySound("sound_playerImpact");
                 target.TakeDamage(damage);
-            } else{
+            } else if (hitObject.CompareTag("Environment")) {
                 Instantiate(hitParticle_env, hit.point, Quaternion.LookRotation(hit.normal));
             }
         }
