@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727698146422643169}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4243108820557886433}
@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 4243108820557886433}
   - component: {fileID: 9066429448146935325}
   - component: {fileID: 8803044034397868795}
+  - component: {fileID: 466105851201699414}
   m_Layer: 0
   m_Name: tp_launcher
   m_TagString: Untagged
@@ -130,6 +131,7 @@ MonoBehaviour:
   shotForce: 2000
   fireRate: 2
   ammo: {fileID: 0}
+  animator: {fileID: 466105851201699414}
 --- !u!114 &8803044034397868795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +146,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxAmmo: 20
   currentAmmo: 0
+--- !u!95 &466105851201699414
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4243108820557656001}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 967d88633b4a7d243bdccac8e743015f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8102366547770010907
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class ProjectileWeapon : MonoBehaviour
     public float shotForce = 1000f;
     public float fireRate = 1f;
     public WeaponAmmo ammo;
+    public Animator animator;
 
     private float nextTimeToFire;
     private bool rtPressed = false;
@@ -56,6 +57,7 @@ public class ProjectileWeapon : MonoBehaviour
     void Shoot()
     {
         AudioManager.instance.PlaySound("Sound_Launcher");
+        animator.Play("TpShooterShoot");
         Rigidbody shot = Instantiate(projectile, shotPos.position, shotPos.rotation) as Rigidbody;
         shot.AddForce(shotPos.forward * shotForce);
     }

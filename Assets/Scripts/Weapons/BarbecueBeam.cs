@@ -10,6 +10,7 @@ public class BarbecueBeam : MonoBehaviour
     public float range;
     public float fireRate = 0.5f;
     public WeaponAmmo ammo;
+    public Animator animator;
 
     private bool rtPressed = false;
     private float nextTimeToFire = 0f;
@@ -67,6 +68,7 @@ public class BarbecueBeam : MonoBehaviour
 
         laser.Play();
         AudioManager.instance.PlaySound("Sound_Bbq_Charge");
+        animator.Play("BbqCharge");
         yield return new WaitForSeconds(2);
         laser.Stop();
 
@@ -77,6 +79,7 @@ public class BarbecueBeam : MonoBehaviour
         RaycastHit hit;
 
         AudioManager.instance.PlaySound("Sound_Bbq_Shot");
+        animator.Play("BbqShoot");
 
         if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit))
         {
