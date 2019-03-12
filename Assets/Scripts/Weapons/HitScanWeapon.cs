@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class HitScanWeapon : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class HitScanWeapon : MonoBehaviour
     public Animator animator;
     public ParticleSystem hitParticle_env;
     public ParticleSystem hitParticle_player;
+    public PlayerUI pUI;
 
     private bool rtPressed = false;
     private bool isShooting = false;
@@ -27,6 +30,8 @@ public class HitScanWeapon : MonoBehaviour
         player = GetComponentInParent<Transform>();
         playerCam = GetComponentInParent<Camera>();
         fireString += playerNumber;
+        
+        
     }
 
     void Update()
@@ -77,6 +82,7 @@ public class HitScanWeapon : MonoBehaviour
 
         RaycastHit hit;
 
+       
         if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit))
         {
             hitObject = hit.transform.gameObject;
@@ -84,9 +90,11 @@ public class HitScanWeapon : MonoBehaviour
 
             if (target != null)
             {
+               
                 Instantiate(hitParticle_player, hit.point, Quaternion.LookRotation(hit.normal));
                 AudioManager.instance.PlaySound("sound_playerImpact");
                 target.TakeDamage(damage);
+                pUI.OnHitMarker();
             } else if (hitObject.CompareTag("Environment")) {
                 Instantiate(hitParticle_env, hit.point, Quaternion.LookRotation(hit.normal));
             }
