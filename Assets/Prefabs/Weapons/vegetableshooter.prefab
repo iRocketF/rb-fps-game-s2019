@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
-  damage: 5
+  damage: 7
   range: 0
   fireRate: 10
   ammo: {fileID: 0}
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a488cd85769c7e04aa3a1c637af52365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAmmo: 100
+  maxAmmo: 50
   currentAmmo: 0
 --- !u!95 &9169436915111633993
 Animator:

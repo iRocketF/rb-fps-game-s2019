@@ -8,17 +8,18 @@ public class BarbecueBeam : MonoBehaviour
     public int playerNumber;
     public float damage = 100f;
     public float range;
-    public float fireRate = 0.5f;
+    public float fireRate = 1f;
     public WeaponAmmo ammo;
     public Animator animator;
+    public ParticleSystem laser;
+    public ParticleSystem beam;
+    public ParticleSystem smoke;
 
     private bool rtPressed = false;
     private float nextTimeToFire = 0f;
     private Camera playerCam;
     private Transform player;
     private GameObject hitObject;
-    public ParticleSystem laser;
-    public ParticleSystem beam;
     private string fireString = "Fire1_Gamepad";
 
 
@@ -69,7 +70,7 @@ public class BarbecueBeam : MonoBehaviour
         laser.Play();
         AudioManager.instance.PlaySound("Sound_Bbq_Charge");
         animator.Play("BbqCharge");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         laser.Stop();
 
         beam.Play();
@@ -90,9 +91,12 @@ public class BarbecueBeam : MonoBehaviour
             if (target != null)
             {
                 target.TakeDamage(damage);
+            } else if (hitObject.CompareTag("Environment"))
+            {
+                Instantiate(smoke, hit.point, Quaternion.LookRotation(hit.normal));
             }
         }
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.1f);
         beam.Stop();
 
     }

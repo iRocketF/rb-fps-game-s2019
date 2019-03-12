@@ -118,5 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoAmount: 0
-  ammo: {fileID: 0}
+  ammoBbq: {fileID: 7085657093182505104, guid: 2c75fd30f9d2a27418fe534f93a0aba7, type: 3}
+  ammoTP: {fileID: 8803044034397868795, guid: 7a3f737c680db5b4698e5748457aef9e, type: 3}
+  ammoVege: {fileID: 7292397128785369223, guid: ae5023c22dd82b74e83b6a75291339df,
+    type: 3}
   spawner: {fileID: 0}

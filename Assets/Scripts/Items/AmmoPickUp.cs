@@ -25,6 +25,7 @@ public class AmmoPickUp : MonoBehaviour
         {
             ammo = other.gameObject.GetComponentInChildren<WeaponAmmo>();
             ammoAmount = ammo.maxAmmo / 2;
+
             if (ammo.currentAmmo < ammo.maxAmmo)
             {
                 AudioManager.instance.PlaySound("Sound_ammoPickUp");
@@ -34,7 +35,7 @@ public class AmmoPickUp : MonoBehaviour
                 spawner = gameObject.GetComponentInParent<PickUpSpawner>();
 
                 gameObject.SetActive(false);
-            }
+            } 
         }
     }
 }

@@ -9572,13 +9572,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
-  damage: 100
+  damage: 50
   range: 0
   fireRate: 0.5
   ammo: {fileID: 0}
   animator: {fileID: 318225751418587102}
   laser: {fileID: 6008196407433233154}
   beam: {fileID: 7450949363210045519}
+  smoke: {fileID: 1918886407081583998, guid: 1c0a0db8c54f8c94a865da6301c86986, type: 3}
 --- !u!114 &7085657093182505104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9591,7 +9592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a488cd85769c7e04aa3a1c637af52365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAmmo: 6
+  maxAmmo: 10
   currentAmmo: 0
 --- !u!95 &318225751418587102
 Animator:
