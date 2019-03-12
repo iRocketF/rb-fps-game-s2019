@@ -157,7 +157,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e3ff3203d8a1a15458fd9b3d399ffff5, type: 2}
+  - {fileID: 2100000, guid: ccd428f727583d9409cd25c808f79c6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -255,8 +255,8 @@ MonoBehaviour:
   axes: 1
   minimumVert: -90
   maximumVert: 90
-  sensHorizontal: 100
-  sensVertical: 100
+  sensHorizontal: 150
+  sensVertical: 150
   _rotationX: 0
 --- !u!1 &8981467485873647882
 GameObject:
@@ -585,6 +585,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7636427662280704069}
     m_Modifications:
+    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
+        type: 3}
+      propertyPath: m_Name
+      value: tp_launcher
+      objectReference: {fileID: 0}
     - target: {fileID: 4243108820557886433, guid: 7a3f737c680db5b4698e5748457aef9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -650,11 +655,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.0010000005
       objectReference: {fileID: 0}
-    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
-        type: 3}
-      propertyPath: m_Name
-      value: tp_launcher
-      objectReference: {fileID: 0}
     - target: {fileID: 9066429448146935325, guid: 7a3f737c680db5b4698e5748457aef9e,
         type: 3}
       propertyPath: playerNumber
@@ -691,6 +691,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: vegetableshooter
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186118348060167035, guid: ae5023c22dd82b74e83b6a75291339df,
+        type: 3}
+      propertyPath: playerNumber
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3127708635299199421, guid: ae5023c22dd82b74e83b6a75291339df,
         type: 3}
@@ -746,11 +751,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2186118348060167035, guid: ae5023c22dd82b74e83b6a75291339df,
-        type: 3}
-      propertyPath: playerNumber
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae5023c22dd82b74e83b6a75291339df, type: 3}

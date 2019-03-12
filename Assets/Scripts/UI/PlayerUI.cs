@@ -17,6 +17,7 @@ public class PlayerUI : MonoBehaviour
     public WeaponAmmo wpAmmo2;
     public WeaponSwitch wpSwitch;
     public int weaponSelected;
+    public TextMeshProUGUI score;
 
 
     // Start is called before the first frame update
@@ -34,7 +35,9 @@ public class PlayerUI : MonoBehaviour
         blinkCD.fillAmount = pMov.nextBlinkTimer / pMov.blinkCoolDown;
         WeaponGetter();
         WpAmmoText();
-       // ammo.text = wpAmmo.currentAmmo + " / " + wpAmmo.maxAmmo;
+        // ammo.text = wpAmmo.currentAmmo + " / " + wpAmmo.maxAmmo;
+        score.text = "P1: " + GameManager.instance.player1Score + " / P2: " + GameManager.instance.player2Score;
+        hpBar.color = Color.Lerp(Color.red, Color.green, hp.health / hp.maxhealth);
     }
 
     void WeaponGetter()

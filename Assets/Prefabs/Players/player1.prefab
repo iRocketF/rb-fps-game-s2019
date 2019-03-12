@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8568ad3455d43454cac8c10dc69a2f1a, type: 2}
+  - {fileID: 2100000, guid: d299ce1527b6e8e45b3b34c9a33875d1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -140,8 +140,8 @@ MonoBehaviour:
   axes: 1
   minimumVert: -90
   maximumVert: 90
-  sensHorizontal: 100
-  sensVertical: 100
+  sensHorizontal: 150
+  sensVertical: 150
   _rotationX: 0
 --- !u!114 &405611978
 MonoBehaviour:
@@ -400,6 +400,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4689923880046390434}
     m_Modifications:
+    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
+        type: 3}
+      propertyPath: m_Name
+      value: tp_launcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4243108820557886433, guid: 7a3f737c680db5b4698e5748457aef9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -454,16 +464,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
-        type: 3}
-      propertyPath: m_Name
-      value: tp_launcher
-      objectReference: {fileID: 0}
-    - target: {fileID: 4243108820557656001, guid: 7a3f737c680db5b4698e5748457aef9e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a3f737c680db5b4698e5748457aef9e, type: 3}
@@ -694,6 +694,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1851669189629731779, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.276e-12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851669189629731779, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 695.45
+      objectReference: {fileID: 0}
     - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
         type: 3}
       propertyPath: hp
@@ -724,21 +734,16 @@ PrefabInstance:
       propertyPath: wpSwitch
       value: 
       objectReference: {fileID: 2428346345968709557}
+    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 3362891478159546981}
     - target: {fileID: 8962349704700955275, guid: 7e45e6addc3532b4084c5263c479465a,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 20440700886115344}
-    - target: {fileID: 1851669189629731779, guid: 7e45e6addc3532b4084c5263c479465a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 7.276e-12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1851669189629731779, guid: 7e45e6addc3532b4084c5263c479465a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 695.45
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e45e6addc3532b4084c5263c479465a, type: 3}
 --- !u!224 &2093670871097730399 stripped
@@ -747,3 +752,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 6196465348843171115}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3362891478159546981 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8887052994566371150, guid: 7e45e6addc3532b4084c5263c479465a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6196465348843171115}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
