@@ -11,7 +11,7 @@ public class BarbecueBeam : MonoBehaviour
     public float fireRate = 1f;
     public WeaponAmmo ammo;
     public Animator animator;
-    public ParticleSystem laser;
+    public ParticleSystem charge;
     public ParticleSystem beam;
     public ParticleSystem smoke;
 
@@ -28,7 +28,7 @@ public class BarbecueBeam : MonoBehaviour
         ammo = GetComponent<WeaponAmmo>();
         player = GetComponentInParent<Transform>();
         playerCam = GetComponentInParent<Camera>();
-        laser = GetComponentInChildren<ParticleSystem>();
+        charge = GetComponentInChildren<ParticleSystem>();
 
         fireString += playerNumber;
     }
@@ -67,11 +67,11 @@ public class BarbecueBeam : MonoBehaviour
     IEnumerator Shoot()
     {
 
-        laser.Play();
+        charge.Play();
         AudioManager.instance.PlaySound("Sound_Bbq_Charge");
         animator.Play("BbqCharge");
         yield return new WaitForSeconds(1);
-        laser.Stop();
+        charge.Stop();
 
         beam.Play();
 
