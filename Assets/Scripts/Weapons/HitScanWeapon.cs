@@ -14,7 +14,7 @@ public class HitScanWeapon : MonoBehaviour
     public Animator animator;
     public ParticleSystem hitParticle_env;
     public ParticleSystem hitParticle_player;
-    public PlayerUI pUI;
+   
 
     private bool rtPressed = false;
     private bool isShooting = false;
@@ -94,7 +94,7 @@ public class HitScanWeapon : MonoBehaviour
                 Instantiate(hitParticle_player, hit.point, Quaternion.LookRotation(hit.normal));
                 AudioManager.instance.PlaySound("sound_playerImpact");
                 target.TakeDamage(damage);
-                pUI.OnHitMarker();
+                
             } else if (hitObject.CompareTag("Environment")) {
                 Instantiate(hitParticle_env, hit.point, Quaternion.LookRotation(hit.normal));
             }

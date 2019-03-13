@@ -57,7 +57,7 @@ MonoBehaviour:
     randomVolume: 0
     randomPitch: 0
   - name: Sound_Bbq_Charge
-    clip: {fileID: 8300000, guid: a2c59e451e65c9c4ea970fb54a9c9157, type: 3}
+    clip: {fileID: 8300000, guid: bc8cee029d31916448cb7084df71dd91, type: 3}
     volume: 0.75
     pitch: 1
     randomVolume: 0
