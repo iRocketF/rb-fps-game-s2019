@@ -128,6 +128,7 @@ MonoBehaviour:
   P1_WpSwitch: {fileID: 0}
   P1_WpSel: 0
   P1_Score: {fileID: 8887052994566371150}
+  crossHair: {fileID: 7444316825998802484}
 --- !u!1 &1284857212017458584
 GameObject:
   m_ObjectHideFlags: 0

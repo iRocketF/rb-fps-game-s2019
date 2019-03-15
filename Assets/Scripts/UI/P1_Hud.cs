@@ -18,14 +18,16 @@ public class P1_Hud : MonoBehaviour
     public WeaponSwitch P1_WpSwitch;
     public int P1_WpSel;
     public TextMeshProUGUI P1_Score;
- 
+    public Image crossHair;
+    public SpriteRenderer hitM;
 
 
     // Start is called before the first frame update
     void Start()
     {
         P1_BlinkCd.fillAmount = 0;
-  
+        hitM.enabled = false;
+    
     }
 
     // Update is called once per frame
@@ -39,7 +41,7 @@ public class P1_Hud : MonoBehaviour
 
         P1_Score.text = "P1: " + GameManager.instance.player1Score + " / P2: " + GameManager.instance.player2Score;
         P1_HpBar.color = Color.Lerp(Color.red, Color.green, P1_Hp.health / P1_Hp.maxhealth);
-
+        
     }
 
     void WeaponGetter()
@@ -62,6 +64,12 @@ public class P1_Hud : MonoBehaviour
             P1_Ammo.text = P1_WpAmmo2.currentAmmo + " / " + P1_WpAmmo2.maxAmmo;
         }
 
+    }
+
+    public void hitMarked ()
+    {
+        hitM.enabled = true;
+        Debug.Log(hitM);
     }
 
 }

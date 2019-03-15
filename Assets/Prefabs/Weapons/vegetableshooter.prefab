@@ -56,7 +56,8 @@ MonoBehaviour:
     type: 3}
   hitParticle_player: {fileID: 1918886407081583998, guid: 54ebabe23e514374a9cb49b4e7e55aea,
     type: 3}
-  pUI: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a, type: 3}
+  player1_Hud: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
+    type: 3}
 --- !u!114 &7292397128785369223
 MonoBehaviour:
   m_ObjectHideFlags: 0

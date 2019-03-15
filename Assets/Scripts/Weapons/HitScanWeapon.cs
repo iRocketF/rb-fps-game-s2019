@@ -14,6 +14,8 @@ public class HitScanWeapon : MonoBehaviour
     public Animator animator;
     public ParticleSystem hitParticle_env;
     public ParticleSystem hitParticle_player;
+    public P1_Hud player1_Hud;
+    
    
 
     private bool rtPressed = false;
@@ -24,12 +26,15 @@ public class HitScanWeapon : MonoBehaviour
     private GameObject hitObject;
     private Transform player;
 
+
+
     void Start()
     {
         ammo = GetComponent<WeaponAmmo>();
         player = GetComponentInParent<Transform>();
         playerCam = GetComponentInParent<Camera>();
         fireString += playerNumber;
+        
         
         
     }
@@ -94,9 +99,13 @@ public class HitScanWeapon : MonoBehaviour
                 Instantiate(hitParticle_player, hit.point, Quaternion.LookRotation(hit.normal));
                 AudioManager.instance.PlaySound("sound_playerImpact");
                 target.TakeDamage(damage);
+
+                //player1_Hud.hitMarked();
+               
                 
             } else if (hitObject.CompareTag("Environment")) {
                 Instantiate(hitParticle_env, hit.point, Quaternion.LookRotation(hit.normal));
+               
             }
         }
     }

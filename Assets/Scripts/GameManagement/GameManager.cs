@@ -41,4 +41,5 @@ public class GameManager : MonoBehaviour
             Debug.Log("Score error. Cant place point.");
         }
     }
+    
 }
