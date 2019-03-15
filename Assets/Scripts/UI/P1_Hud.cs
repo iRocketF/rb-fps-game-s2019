@@ -66,10 +66,11 @@ public class P1_Hud : MonoBehaviour
 
     }
 
+    /*
     public void hitMarked ()
     {
         hitM.enabled = true;
         Debug.Log(hitM);
     }
-
+    */
 }
