@@ -61,7 +61,7 @@ public class Health : MonoBehaviour
         wpAmmoTP.currentAmmo = wpAmmoTP.maxAmmo;
         wpAmmoVege.currentAmmo = wpAmmoVege.maxAmmo;
         pMov.currentBlinks = pMov.maxBlinks;
-
+        pMov.nextBlinkTimer = 0;
 
         spawnhandler.GetComponent<Spawn>().Respawn(player);
         
