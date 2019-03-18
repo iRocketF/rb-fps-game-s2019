@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public  static GameManager instance;
 
+    public Transform p1;
+    public Transform p2;
+
     public int player1Score;
     public int player2Score;
     // Start is called before the first frame update
@@ -23,6 +26,8 @@ public class GameManager : MonoBehaviour
 
         player1Score = 0;
         player2Score = 0;
+
+
     }
 
     // Update is called once per frame

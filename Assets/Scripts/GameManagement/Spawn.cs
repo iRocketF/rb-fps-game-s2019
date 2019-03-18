@@ -21,7 +21,7 @@ public class Spawn : MonoBehaviour
         respawnNumber = Random.Range(0, transform.childCount);
         respawnInt = Mathf.RoundToInt(respawnNumber);
 
-        Instantiate(player1, this.gameObject.transform.GetChild(respawnInt));
+        GameManager.instance.p1 = Instantiate(player1, this.gameObject.transform.GetChild(respawnInt)).transform;
 
         lastRespawnInt = respawnInt;
 
@@ -37,7 +37,7 @@ public class Spawn : MonoBehaviour
             }
         }
 
-        Instantiate(player2, this.gameObject.transform.GetChild(respawnInt));
+        GameManager.instance.p2 = Instantiate(player2, this.gameObject.transform.GetChild(respawnInt)).transform;
     }
 
     public void Respawn(GameObject player)

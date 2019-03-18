@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 4312385712672396}
   - component: {fileID: 20440700886115344}
   - component: {fileID: 7042479939941073779}
+  - component: {fileID: 2129771454424620027}
   m_Layer: 0
   m_Name: Player POV
   m_TagString: Player
@@ -258,6 +259,23 @@ MonoBehaviour:
   sensHorizontal: 200
   sensVertical: 200
   _rotationX: 0
+--- !u!114 &2129771454424620027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622741784763604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349599c2bd9fc484a8e8c60682628541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_goCamera: {fileID: 1622741784763604}
+  m_goBody: {fileID: 1142961048568904}
+  m_fTargetingMinAngle: 5
+  m_fAimAssistSpeed: 7
+  m_eThisPlayer: 0
 --- !u!1 &2545981046410422594
 GameObject:
   m_ObjectHideFlags: 0
