@@ -14,6 +14,8 @@ public class BarbecueBeam : MonoBehaviour
     public ParticleSystem charge;
     public ParticleSystem beam;
     public ParticleSystem smoke;
+    public ParticleSystem hitParticle_player;
+
 
     private bool rtPressed = false;
     private float nextTimeToFire = 0f;
@@ -90,6 +92,8 @@ public class BarbecueBeam : MonoBehaviour
 
             if (target != null)
             {
+                Instantiate(hitParticle_player, hit.point, Quaternion.LookRotation(hit.normal));
+                AudioManager.instance.PlaySound("sound_playerImpact");
                 target.TakeDamage(damage);
             } else if (hitObject.CompareTag("Environment"))
             {

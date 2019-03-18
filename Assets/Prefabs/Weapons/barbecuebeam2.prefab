@@ -9577,9 +9577,11 @@ MonoBehaviour:
   fireRate: 0.5
   ammo: {fileID: 0}
   animator: {fileID: 318225751418587102}
-  laser: {fileID: 6008196407433233154}
+  charge: {fileID: 6008196407433233154}
   beam: {fileID: 7450949363210045519}
   smoke: {fileID: 1918886407081583998, guid: 1c0a0db8c54f8c94a865da6301c86986, type: 3}
+  hitParticle_player: {fileID: 1918886407081583998, guid: 54ebabe23e514374a9cb49b4e7e55aea,
+    type: 3}
 --- !u!114 &7085657093182505104
 MonoBehaviour:
   m_ObjectHideFlags: 0
