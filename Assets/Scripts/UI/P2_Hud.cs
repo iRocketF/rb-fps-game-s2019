@@ -37,7 +37,7 @@ public class P2_Hud : MonoBehaviour
         WeaponGetter();
         WpAmmoText();
 
-        P2_Score.text = "P1: " + GameManager.instance.player1Score + " / P2: " + GameManager.instance.player2Score;
+        //P2_Score.text = "P1: " + GameManager.instance.player1Score + " / P2: " + GameManager.instance.player2Score;
         P2_HpBar.color = Color.Lerp(Color.red, Color.green, P2_Hp.health / P2_Hp.maxhealth);
 
     }
