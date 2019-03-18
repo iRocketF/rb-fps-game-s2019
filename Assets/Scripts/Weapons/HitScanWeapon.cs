@@ -10,8 +10,10 @@ public class HitScanWeapon : MonoBehaviour
     public float damage = 10f;
     public float range;
     public float fireRate = 15f;
+    public float m_fRandomAngle;
     public WeaponAmmo ammo;
     public Animator animator;
+    public Transform m_tTarget = null;
     public ParticleSystem hitParticle_env;
     public ParticleSystem hitParticle_player;
     public P1_Hud player1_Hud;
@@ -34,9 +36,7 @@ public class HitScanWeapon : MonoBehaviour
         player = GetComponentInParent<Transform>();
         playerCam = GetComponentInParent<Camera>();
         fireString += playerNumber;
-        
-        
-        
+       
     }
 
     void Update()
@@ -48,9 +48,12 @@ public class HitScanWeapon : MonoBehaviour
             {
                 rtPressed = true;
                 isShooting = true;
+
                 nextTimeToFire = Time.time + 1f / fireRate;
+
                 ammo.currentAmmo--;
                 Shoot();
+
             } if(Input.GetAxis(fireString) < 0.2)
             {
                 isShooting = false;
@@ -85,10 +88,15 @@ public class HitScanWeapon : MonoBehaviour
     {
         AudioManager.instance.PlaySound("Sound_Shot");
 
+        Vector3 tDirection = playerCam.transform.forward;
+        Quaternion qRandomRecoil = Quaternion.identity
+                                   * Quaternion.AngleAxis(Random.Range(-m_fRandomAngle, m_fRandomAngle), Vector3.up)
+                                   * Quaternion.AngleAxis(Random.Range(-m_fRandomAngle, m_fRandomAngle), Vector3.right);
+        tDirection = qRandomRecoil * tDirection;
+
         RaycastHit hit;
 
-       
-        if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit))
+        if (Physics.Raycast(playerCam.transform.position, tDirection, out hit))
         {
             hitObject = hit.transform.gameObject;
             Health target = hitObject.GetComponent<Health>();
@@ -98,6 +106,7 @@ public class HitScanWeapon : MonoBehaviour
                
                 Instantiate(hitParticle_player, hit.point, Quaternion.LookRotation(hit.normal));
                 AudioManager.instance.PlaySound("sound_playerImpact");
+
                 target.TakeDamage(damage);
 
                 //player1_Hud.hitMarked();
