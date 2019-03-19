@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public  static GameManager instance;
+    public static GameManager instance;
 
     public Transform p1;
     public Transform p2;
@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     public float gameEndTimer;
 
-    private string winner;
+    public bool isVictor;
 
     void Awake()
     {
@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
         player1Score = 0;
         player2Score = 0;
 
+        isVictor = false;
+
         gameEndTimer = 0;
 
 
@@ -43,8 +45,12 @@ public class GameManager : MonoBehaviour
     {
         if (player1Score == 20 || player2Score == 20)
         {
+            Winner();
+        }
+
+        if(isVictor)
+        {
             GameEnd();
-            
         }
     }
 
@@ -60,15 +66,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Winner()
+    {
+        AudioManager.instance.PlaySound("sound_game_win");
+        isVictor = true;
+        player1Score = 0;
+        player2Score = 0;
+
+    }
+
     public void GameEnd()
     {
-        
-        Time.timeScale = 0.4f;
         gameEndTimer += Time.deltaTime;
-
+        
         if(gameEndTimer > 10f)
         {
             SceneManager.LoadScene(0);
+            gameEndTimer = 0;
+            isVictor = false;
+
         }
         
     }
