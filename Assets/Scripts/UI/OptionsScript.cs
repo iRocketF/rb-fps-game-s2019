@@ -13,6 +13,6 @@ public class OptionsScript : MonoBehaviour
     }
 
     public void BackButton() {
-     SceneManager.LoadScene(1);
+     SceneManager.LoadScene(0);
     }
 }
