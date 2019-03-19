@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 
 public class GameManager : MonoBehaviour
@@ -12,7 +14,11 @@ public class GameManager : MonoBehaviour
 
     public int player1Score;
     public int player2Score;
-    // Start is called before the first frame update
+
+    public float gameEndTimer;
+
+    private string winner;
+
     void Awake()
     {
         if (instance == null)
@@ -27,14 +33,21 @@ public class GameManager : MonoBehaviour
         player1Score = 0;
         player2Score = 0;
 
+        gameEndTimer = 0;
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-   
+        if (player1Score == 20 || player2Score == 20)
+        {
+            GameEnd();
+            
+        }
     }
+
     public void GivePoint(int playerNum)
     {
         if (playerNum == 1)
@@ -45,6 +58,19 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Score error. Cant place point.");
         }
+    }
+
+    public void GameEnd()
+    {
+        
+        Time.timeScale = 0.4f;
+        gameEndTimer += Time.deltaTime;
+
+        if(gameEndTimer > 10f)
+        {
+            SceneManager.LoadScene(0);
+        }
+        
     }
     
 }

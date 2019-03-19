@@ -19,14 +19,12 @@ public class P1_Hud : MonoBehaviour
     public int P1_WpSel;
     public TextMeshProUGUI P1_Score;
     public Image crossHair;
-    public SpriteRenderer hitM;
 
 
     // Start is called before the first frame update
     void Start()
     {
         P1_BlinkCd.fillAmount = 0;
-        hitM.enabled = false;
     
     }
 
