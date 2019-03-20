@@ -21,7 +21,7 @@ public class HitScanWeapon : MonoBehaviour
    
 
     private bool rtPressed = false;
-    private bool isShooting = false;
+    public bool isShooting = false;
     private float nextTimeToFire = 0f;
     private string fireString = "Fire1_Gamepad";
     private Camera playerCam;
@@ -52,6 +52,12 @@ public class HitScanWeapon : MonoBehaviour
                 nextTimeToFire = Time.time + 1f / fireRate;
 
                 ammo.currentAmmo--;
+
+                if(ammo.currentAmmo == 0)
+                {
+                    isShooting = false;
+                    AudioManager.instance.PlaySound("sound_ammoEmpty");
+                }
                 Shoot();
 
             } if(Input.GetAxis(fireString) < 0.2)
