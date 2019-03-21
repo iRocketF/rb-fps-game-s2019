@@ -19,13 +19,14 @@ public class P1_Hud : MonoBehaviour
     public int P1_WpSel;
     public TextMeshProUGUI P1_Score;
     public Image crossHair;
+    public TextMeshProUGUI p1_WinText;
 
 
     // Start is called before the first frame update
     void Start()
     {
         P1_BlinkCd.fillAmount = 0;
-    
+        
     }
 
     // Update is called once per frame
@@ -39,6 +40,9 @@ public class P1_Hud : MonoBehaviour
 
         P1_Score.text = "P1: " + GameManager.instance.player1Score + " / P2: " + GameManager.instance.player2Score;
         P1_HpBar.color = Color.Lerp(Color.red, Color.green, P1_Hp.health / P1_Hp.maxhealth);
+        WinnerText();
+        
+       
         
     }
 
@@ -62,6 +66,16 @@ public class P1_Hud : MonoBehaviour
             P1_Ammo.text = P1_WpAmmo2.currentAmmo + " / " + P1_WpAmmo2.maxAmmo;
         }
 
+    }
+    public void WinnerText()
+    {
+        if(GameManager.instance.isVictor)
+        {
+            p1_WinText.text = "YOU WIN!";
+        } else if(GameManager.instance.isVictor == false)
+        {
+            p1_WinText.text = " ";
+        }
     }
 
     /*

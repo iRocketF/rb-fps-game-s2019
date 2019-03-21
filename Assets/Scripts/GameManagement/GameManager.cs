@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
 
     public bool isVictor;
 
+    public P1_Hud p1Hud;
+    public P2_Hud p2Hud;
+
     void Awake()
     {
         if (instance == null)
@@ -26,7 +29,7 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this);
         }
-            
+
         else if (instance != this)
             Destroy(gameObject);
 
@@ -45,10 +48,12 @@ public class GameManager : MonoBehaviour
     {
         if (player1Score == 20 || player2Score == 20)
         {
+            p1Hud.WinnerText();
+            p2Hud.WinnerText();
             Winner();
         }
 
-        if(isVictor)
+        if (isVictor)
         {
             GameEnd();
         }
@@ -62,7 +67,7 @@ public class GameManager : MonoBehaviour
             player1Score++;
         else
         {
-            Debug.Log("Score error. Cant place point.");
+
         }
     }
 
@@ -78,15 +83,17 @@ public class GameManager : MonoBehaviour
     public void GameEnd()
     {
         gameEndTimer += Time.deltaTime;
-        
-        if(gameEndTimer > 10f)
+
+        if (gameEndTimer > 10f)
         {
             SceneManager.LoadScene(0);
             gameEndTimer = 0;
             isVictor = false;
-
+            
         }
-        
+
     }
     
+
+
 }

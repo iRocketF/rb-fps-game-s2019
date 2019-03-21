@@ -17,7 +17,7 @@ public class P2_Hud : MonoBehaviour
     public WeaponAmmo P2_WpAmmo2;
     public WeaponSwitch P2_WpSwitch;
     public int P2_WpSel;
-    public TextMeshProUGUI P2_Score;
+    public TextMeshProUGUI p2_WinText;
  
 
 
@@ -25,7 +25,7 @@ public class P2_Hud : MonoBehaviour
     void Start()
     {
         P2_BlinkCd.fillAmount = 0;
-  
+
     }
 
     // Update is called once per frame
@@ -39,7 +39,7 @@ public class P2_Hud : MonoBehaviour
 
         //P2_Score.text = "P1: " + GameManager.instance.player1Score + " / P2: " + GameManager.instance.player2Score;
         P2_HpBar.color = Color.Lerp(Color.red, Color.green, P2_Hp.health / P2_Hp.maxhealth);
-
+        WinnerText();
     }
 
     void WeaponGetter()
@@ -62,6 +62,20 @@ public class P2_Hud : MonoBehaviour
             P2_Ammo.text = P2_WpAmmo2.currentAmmo + " / " + P2_WpAmmo2.maxAmmo;
         }
 
+    }
+    public void WinnerText()
+    {
+        print(GameManager.instance.isVictor);
+        if (GameManager.instance.isVictor)
+        {
+            print("sipari on hyvä runescapessa");
+            p2_WinText.text = "YOU WIN!";
+        }
+        else if (GameManager.instance.isVictor == false)
+        {
+            print("Sipari on huono runescapessa");
+            p2_WinText.text = " ";
+        }
     }
 
 }
