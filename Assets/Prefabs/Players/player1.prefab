@@ -274,8 +274,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_goCamera: {fileID: 1622741784763604}
   m_goBody: {fileID: 1142961048568904}
-  m_fTargetingMinAngle: 5
+  m_fTargetingMinAngle: 8
   m_fAimAssistSpeed: 7
+  dis: 0
   m_eThisPlayer: 0
 --- !u!114 &8152409073410706549
 MonoBehaviour:
@@ -346,11 +347,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4853503451421402}
     m_Modifications:
-    - target: {fileID: 431798455414781425, guid: 7e45e6addc3532b4084c5263c479465a,
+    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
         type: 3}
-      propertyPath: m_Name
-      value: P1_UICanvas
+      propertyPath: P1_Hp
+      value: 
+      objectReference: {fileID: 405611978}
+    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: P1_PMov
+      value: 
+      objectReference: {fileID: 3134991323797803007}
+    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: P1_Blinks
+      value: 
+      objectReference: {fileID: 4539534166487756993}
+    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: P1_WpAmmo0
+      value: 
+      objectReference: {fileID: 5644161401271139256}
+    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: P1_WpAmmo1
+      value: 
+      objectReference: {fileID: 4668048175997909912}
+    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: P1_WpAmmo2
+      value: 
+      objectReference: {fileID: 2509464485692192567}
+    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: P1_WpSwitch
+      value: 
+      objectReference: {fileID: 2428346345968709557}
+    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: hitM
+      value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: p1_WinText
+      value: 
+      objectReference: {fileID: 7156256523373761135}
     - target: {fileID: 5255827170467285108, guid: 7e45e6addc3532b4084c5263c479465a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -456,56 +497,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
+    - target: {fileID: 431798455414781425, guid: 7e45e6addc3532b4084c5263c479465a,
         type: 3}
-      propertyPath: P1_Hp
-      value: 
-      objectReference: {fileID: 405611978}
-    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
-        type: 3}
-      propertyPath: P1_PMov
-      value: 
-      objectReference: {fileID: 3134991323797803007}
-    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
-        type: 3}
-      propertyPath: P1_Blinks
-      value: 
-      objectReference: {fileID: 4539534166487756993}
-    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
-        type: 3}
-      propertyPath: P1_WpAmmo0
-      value: 
-      objectReference: {fileID: 5644161401271139256}
-    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
-        type: 3}
-      propertyPath: P1_WpAmmo1
-      value: 
-      objectReference: {fileID: 4668048175997909912}
-    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
-        type: 3}
-      propertyPath: P1_WpAmmo2
-      value: 
-      objectReference: {fileID: 2509464485692192567}
-    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
-        type: 3}
-      propertyPath: P1_WpSwitch
-      value: 
-      objectReference: {fileID: 2428346345968709557}
-    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
-        type: 3}
-      propertyPath: hitM
-      value: 
+      propertyPath: m_Name
+      value: P1_UICanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
-        type: 3}
-      propertyPath: p1_WinText
-      value: 
-      objectReference: {fileID: 7156256523373761135}
-    - target: {fileID: 8962349704700955275, guid: 7e45e6addc3532b4084c5263c479465a,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 20440700886115344}
     - target: {fileID: 2008638351129856132, guid: 7e45e6addc3532b4084c5263c479465a,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -572,15 +568,20 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8962349704700955275, guid: 7e45e6addc3532b4084c5263c479465a,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 20440700886115344}
     - target: {fileID: 5066433932544829994, guid: 7e45e6addc3532b4084c5263c479465a,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5066433932544829994, guid: 7e45e6addc3532b4084c5263c479465a,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5066433932544829994, guid: 7e45e6addc3532b4084c5263c479465a,
         type: 3}

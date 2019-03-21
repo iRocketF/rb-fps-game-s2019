@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class MainMenuButtons : MonoBehaviour
 {
+
     public void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -23,5 +24,6 @@ public class MainMenuButtons : MonoBehaviour
     public void QuitGame() {
         Application.Quit();
     }
+
 }
 
