@@ -14,13 +14,16 @@ public class GameManager : MonoBehaviour
 
     public int player1Score;
     public int player2Score;
+    public int wins;
 
     public float gameEndTimer;
 
-    public bool isVictor;
+    public bool p1_win = false;
+    public bool p2_win = false;
 
     public P1_Hud p1Hud;
     public P2_Hud p2Hud;
+
 
     void Awake()
     {
@@ -36,7 +39,7 @@ public class GameManager : MonoBehaviour
         player1Score = 0;
         player2Score = 0;
 
-        isVictor = false;
+        p2_win = false;
 
         gameEndTimer = 0;
 
@@ -46,14 +49,22 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player1Score == 20 || player2Score == 20)
+        if (player1Score == wins || player2Score == wins)
         {
-            p1Hud.WinnerText();
-            p2Hud.WinnerText();
+            if(player1Score == wins)
+            {
+                p1_win = true;
+                p1Hud.WinnerText();
+            }
+            else if (player2Score == wins)
+            {
+                p2_win = true;
+                p2Hud.WinnerText();
+            }
             Winner();
         }
 
-        if (isVictor)
+        if (p2_win)
         {
             GameEnd();
         }
@@ -61,6 +72,8 @@ public class GameManager : MonoBehaviour
 
     public void GivePoint(int playerNum)
     {
+
+        //AudioManager.instance.PlaySound("sound_game_pointCheer");
         if (playerNum == 1)
             player2Score++;
         if (playerNum == 2)
@@ -74,7 +87,6 @@ public class GameManager : MonoBehaviour
     public void Winner()
     {
         AudioManager.instance.PlaySound("sound_game_win");
-        isVictor = true;
         player1Score = 0;
         player2Score = 0;
 
@@ -88,7 +100,7 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(0);
             gameEndTimer = 0;
-            isVictor = false;
+            p2_win = false;
             
         }
 

@@ -65,15 +65,12 @@ public class P2_Hud : MonoBehaviour
     }
     public void WinnerText()
     {
-        print(GameManager.instance.isVictor);
-        if (GameManager.instance.isVictor)
+        if (GameManager.instance.p2_win)
         {
-            print("sipari on hyvä runescapessa");
             p2_WinText.text = "YOU WIN!";
         }
-        else if (GameManager.instance.isVictor == false)
+        else if (GameManager.instance.p2_win == false)
         {
-            print("Sipari on huono runescapessa");
             p2_WinText.text = " ";
         }
     }

@@ -69,10 +69,10 @@ public class P1_Hud : MonoBehaviour
     }
     public void WinnerText()
     {
-        if(GameManager.instance.isVictor)
+        if(GameManager.instance.p1_win)
         {
             p1_WinText.text = "YOU WIN!";
-        } else if(GameManager.instance.isVictor == false)
+        } else if(GameManager.instance.p1_win == false)
         {
             p1_WinText.text = " ";
         }
