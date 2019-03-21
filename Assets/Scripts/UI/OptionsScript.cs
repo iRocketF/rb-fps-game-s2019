@@ -8,6 +8,13 @@ using UnityEngine.SceneManagement;
 public class OptionsScript : MonoBehaviour
 {
     public AudioMixer audioMixer;
+    public Dropdown gameModeSelect;
+
+    public void Update()
+    {
+        
+    }
+
     public void SetVolume (float volume) {
         audioMixer.SetFloat("volume", volume);
     }
@@ -15,4 +22,6 @@ public class OptionsScript : MonoBehaviour
     public void BackButton() {
      SceneManager.LoadScene(0);
     }
+
+  
 }
