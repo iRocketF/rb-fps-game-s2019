@@ -110,10 +110,10 @@ MonoBehaviour:
     pitch: 1
     randomVolume: 0
     randomPitch: 1
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: sound_game_win
+    clip: {fileID: 8300000, guid: 1ac9a8b8e2425684f8a17478e8a9d759, type: 3}
+    volume: 0.5
+    pitch: 1
     randomVolume: 0
     randomPitch: 0
   - name: 

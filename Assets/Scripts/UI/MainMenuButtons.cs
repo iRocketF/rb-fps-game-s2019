@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class MainMenuButtons : MonoBehaviour
 {
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+    }
     public void Play() {
         SceneManager.LoadScene(2);
     }
