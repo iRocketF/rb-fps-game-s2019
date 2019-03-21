@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
     {
         if (player1Score == wins || player2Score == wins)
         {
-            if(player1Score == wins)
+            if (player1Score == wins)
             {
                 p1_win = true;
                 p1Hud.WinnerText();
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
             Winner();
         }
 
-        if (p2_win)
+        if (p1_win || p2_win)
         {
             GameEnd();
         }
@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(0);
             gameEndTimer = 0;
+            p1_win = false;
             p2_win = false;
             
         }
