@@ -21,6 +21,12 @@ public class P1_Hud : MonoBehaviour
     public Image crossHair;
     public TextMeshProUGUI p1_WinText;
 
+    public Image damageIndicator;
+    public float dmgTimer;
+    public float dmgTimerCD;
+    public bool hasTakenDmg;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,9 +47,20 @@ public class P1_Hud : MonoBehaviour
         P1_Score.text = "P1: " + GameManager.instance.player1Score + " / P2: " + GameManager.instance.player2Score;
         P1_HpBar.color = Color.Lerp(Color.red, Color.green, P1_Hp.health / P1_Hp.maxhealth);
         WinnerText();
-        
-       
-        
+
+        if (hasTakenDmg)
+        {
+            damageIndicator.enabled = true;
+            dmgTimer += Time.deltaTime;
+            if (dmgTimer > dmgTimerCD)
+            {
+                damageIndicator.enabled = false;
+                hasTakenDmg = false;
+                dmgTimer = 0f;
+            }
+
+        }
+
     }
 
     void WeaponGetter()
@@ -76,6 +93,13 @@ public class P1_Hud : MonoBehaviour
         {
             p1_WinText.text = " ";
         }
+    }
+
+    public void GotHit()
+    {
+
+        damageIndicator.enabled = true;
+
     }
 
     /*

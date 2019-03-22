@@ -18,6 +18,11 @@ public class P2_Hud : MonoBehaviour
     public WeaponSwitch P2_WpSwitch;
     public int P2_WpSel;
     public TextMeshProUGUI p2_WinText;
+
+    public Image TakenDmg;
+    public float dmgTimer;
+    public float dmgTimerCD;
+    public bool hasTakenDmg;
  
 
 
@@ -25,6 +30,7 @@ public class P2_Hud : MonoBehaviour
     void Start()
     {
         P2_BlinkCd.fillAmount = 0;
+        TakenDmg.enabled = false;
 
     }
 
@@ -40,6 +46,19 @@ public class P2_Hud : MonoBehaviour
         //P2_Score.text = "P1: " + GameManager.instance.player1Score + " / P2: " + GameManager.instance.player2Score;
         P2_HpBar.color = Color.Lerp(Color.red, Color.green, P2_Hp.health / P2_Hp.maxhealth);
         WinnerText();
+
+        if(hasTakenDmg)
+        {
+            TakenDmg.enabled = true;
+            dmgTimer += Time.deltaTime;
+            if(dmgTimer > dmgTimerCD)
+            {
+                TakenDmg.enabled = false;
+                hasTakenDmg = false;
+                dmgTimer = 0f;
+            }
+                
+        }
     }
 
     void WeaponGetter()
@@ -73,6 +92,11 @@ public class P2_Hud : MonoBehaviour
         {
             p2_WinText.text = " ";
         }
+    }
+
+    public void GotHit()
+    {
+        hasTakenDmg = true;
     }
 
 }

@@ -13,6 +13,8 @@ public class Health : MonoBehaviour
     [HideInInspector]
     public WeaponAmmo wpAmmoTP;
     public PlayerMovement pMov;
+    public P1_Hud p1hud;
+    public P2_Hud p2hud;
 
 
     public int playerNum;
@@ -23,6 +25,7 @@ public class Health : MonoBehaviour
     {
         player = this.gameObject;
         spawnhandler = GameObject.Find("SpawnHandler");
+
     }
     public void Update()
     {
@@ -42,6 +45,9 @@ public class Health : MonoBehaviour
     {
         //particle system/shader
         health -= amount;
+
+        p2hud.GotHit();
+
         if(health <= 0f)
         {
             Die();

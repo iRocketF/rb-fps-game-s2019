@@ -88,12 +88,12 @@ public class AimAssist : MonoBehaviour
 
             if (target != null)
             {
-                print("visible: " + visible);
+                // print("visible: " + visible);
                 visible = true;
 
             } else
             {
-                print("visible: " + visible);
+                // print("visible: " + visible);
                 visible = false;
             }
             
