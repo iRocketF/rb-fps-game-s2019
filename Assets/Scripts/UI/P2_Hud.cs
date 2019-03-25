@@ -19,11 +19,7 @@ public class P2_Hud : MonoBehaviour
     public int P2_WpSel;
     public TextMeshProUGUI p2_WinText;
     public TextMeshProUGUI p2_HpText;
-
     public Image TakenDmg;
-    public float dmgTimer;
-    public float dmgTimerCD;
-    public bool hasTakenDmg;
  
 
 
@@ -50,17 +46,12 @@ public class P2_Hud : MonoBehaviour
         P2_HpBar.color = Color.Lerp(Color.red, Color.green, P2_Hp.health / P2_Hp.maxhealth);
         WinnerText();
 
-        if(hasTakenDmg)
+        if(P2_Hp.hasTakenDmg)
         {
-            TakenDmg.enabled = true;
-            dmgTimer += Time.deltaTime;
-            if(dmgTimer > dmgTimerCD)
-            {
-                TakenDmg.enabled = false;
-                hasTakenDmg = false;
-                dmgTimer = 0f;
-            }
-                
+            TakenDmg.enabled = true;       
+        } else
+        {
+            TakenDmg.enabled = false;
         }
     }
 
@@ -95,11 +86,6 @@ public class P2_Hud : MonoBehaviour
         {
             p2_WinText.text = " ";
         }
-    }
-
-    public void GotHit()
-    {
-        hasTakenDmg = true;
     }
 
     public void Hitpoints()

@@ -44,7 +44,7 @@ Camera:
   m_GameObject: {fileID: 1394271202464316}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
@@ -272,6 +272,9 @@ MonoBehaviour:
   pMov: {fileID: 4449229642647396789}
   p1hud: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a, type: 3}
   p2hud: {fileID: 8609151449532375460}
+  dmgTimer: 0
+  dmgTimerCD: 0.1
+  hasTakenDmg: 0
   playerNum: 2
   health: 100
   maxhealth: 100
@@ -441,11 +444,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4221960064973318}
     m_Modifications:
-    - target: {fileID: 431798455414781425, guid: e25b6d61b9a690a4380e498d5fd5f995,
-        type: 3}
-      propertyPath: m_Name
-      value: P2_UICanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 5988965093435170543, guid: e25b6d61b9a690a4380e498d5fd5f995,
         type: 3}
       propertyPath: P2_Hp
@@ -475,7 +473,7 @@ PrefabInstance:
         type: 3}
       propertyPath: P2_WpAmmo2
       value: 
-      objectReference: {fileID: 4952308485257591247}
+      objectReference: {fileID: 7582478290582077046}
     - target: {fileID: 5988965093435170543, guid: e25b6d61b9a690a4380e498d5fd5f995,
         type: 3}
       propertyPath: P2_WpSwitch
@@ -485,6 +483,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dmgTimerCD
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 431798455414781425, guid: e25b6d61b9a690a4380e498d5fd5f995,
+        type: 3}
+      propertyPath: m_Name
+      value: P2_UICanvas
       objectReference: {fileID: 0}
     - target: {fileID: 3511900970909802036, guid: e25b6d61b9a690a4380e498d5fd5f995,
         type: 3}
@@ -509,12 +512,12 @@ PrefabInstance:
     - target: {fileID: 395192797721303163, guid: e25b6d61b9a690a4380e498d5fd5f995,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 395192797721303163, guid: e25b6d61b9a690a4380e498d5fd5f995,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 395192797721303163, guid: e25b6d61b9a690a4380e498d5fd5f995,
         type: 3}
@@ -535,11 +538,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_inputSource
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3852647044022326184, guid: e25b6d61b9a690a4380e498d5fd5f995,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5255827170467285108, guid: e25b6d61b9a690a4380e498d5fd5f995,
         type: 3}
@@ -660,6 +658,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3852647044022326184, guid: e25b6d61b9a690a4380e498d5fd5f995,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4540664782302795486, guid: e25b6d61b9a690a4380e498d5fd5f995,
         type: 3}
@@ -854,11 +857,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: vegetableshooter
       objectReference: {fileID: 0}
-    - target: {fileID: 2186118348060167035, guid: ae5023c22dd82b74e83b6a75291339df,
-        type: 3}
-      propertyPath: playerNumber
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3127708635299199421, guid: ae5023c22dd82b74e83b6a75291339df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -913,6 +911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186118348060167035, guid: ae5023c22dd82b74e83b6a75291339df,
+        type: 3}
+      propertyPath: playerNumber
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae5023c22dd82b74e83b6a75291339df, type: 3}

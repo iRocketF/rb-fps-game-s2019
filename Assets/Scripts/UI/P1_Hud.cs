@@ -21,10 +21,7 @@ public class P1_Hud : MonoBehaviour
     public Image crossHair;
     public TextMeshProUGUI p1_WinText;
     public TextMeshProUGUI P1_HpText;
-    public Image damageIndicator;
-    public float dmgTimer;
-    public float dmgTimerCD;
-    public bool hasTakenDmg;
+    public Image TakenDmg;
 
 
 
@@ -51,17 +48,13 @@ public class P1_Hud : MonoBehaviour
         P1_HpBar.color = Color.Lerp(Color.red, Color.green, P1_Hp.health / P1_Hp.maxhealth);
         WinnerText();
 
-        if (hasTakenDmg)
+        if (P1_Hp.hasTakenDmg)
         {
-            damageIndicator.enabled = true;
-            dmgTimer += Time.deltaTime;
-            if (dmgTimer > dmgTimerCD)
-            {
-                damageIndicator.enabled = false;
-                hasTakenDmg = false;
-                dmgTimer = 0f;
-            }
-
+            TakenDmg.enabled = true;
+        }
+        else
+        {
+            TakenDmg.enabled = false;
         }
 
     }
@@ -96,13 +89,6 @@ public class P1_Hud : MonoBehaviour
         {
             p1_WinText.text = " ";
         }
-    }
-
-    public void GotHit()
-    {
-
-        damageIndicator.enabled = true;
-
     }
 
     public void Hitpoints()

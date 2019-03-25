@@ -15,6 +15,9 @@ public class Health : MonoBehaviour
     public PlayerMovement pMov;
     public P1_Hud p1hud;
     public P2_Hud p2hud;
+    public float dmgTimer;
+    public float dmgTimerCD;
+    public bool hasTakenDmg;
 
 
     public int playerNum;
@@ -33,6 +36,17 @@ public class Health : MonoBehaviour
         {
             health = maxhealth;
         }
+
+        if (hasTakenDmg)
+        {
+            dmgTimer += Time.deltaTime;
+            if (dmgTimer > dmgTimerCD)
+            {
+                hasTakenDmg = false;
+                dmgTimer = 0f;
+            }
+
+        }
     }
 
     public void IncreaseHealth(float amount)
@@ -46,7 +60,7 @@ public class Health : MonoBehaviour
         //particle system/shader
         health -= amount;
 
-        p2hud.GotHit();
+        hasTakenDmg = true;
 
         if(health <= 0f)
         {
