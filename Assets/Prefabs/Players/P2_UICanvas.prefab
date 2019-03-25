@@ -56,7 +56,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 0}
-  m_PlaneDistance: 0.34
+  m_PlaneDistance: 0.11
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
   P2_HpBar: {fileID: 3511900970909802036}
   P2_Hp: {fileID: 0}
   P2_PMov: {fileID: 0}
-  P2_Blinks: {fileID: 0}
+  P2_Blinks: {fileID: 2008638351129856132}
   P2_BlinkCd: {fileID: 3574361545746653513}
   P2_Ammo: {fileID: 6546620143490628352}
   P2_WpAmmo0: {fileID: 0}
@@ -92,9 +92,6 @@ MonoBehaviour:
   p2_WinText: {fileID: 395192797721303163}
   p2_HpText: {fileID: 5261294179044253874}
   TakenDmg: {fileID: 3852647044022326184}
-  dmgTimer: 0
-  dmgTimerCD: 0
-  hasTakenDmg: 0
 --- !u!114 &3404519935537171445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,7 +510,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0.993
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -979,10 +976,10 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 2c58cc2e4296f46418e85b2c38b30511, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -1052,7 +1049,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: ' '
+  m_text: YOU WIN!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1087,7 +1084,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 514
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1121,10 +1118,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 395192797721303163}
-    characterCount: 1
+    characterCount: 8
     spriteCount: 0
     spaceCount: 1
-    wordCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
