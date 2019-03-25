@@ -18,6 +18,7 @@ public class P2_Hud : MonoBehaviour
     public WeaponSwitch P2_WpSwitch;
     public int P2_WpSel;
     public TextMeshProUGUI p2_WinText;
+    public TextMeshProUGUI p2_HpText;
 
     public Image TakenDmg;
     public float dmgTimer;
@@ -37,7 +38,9 @@ public class P2_Hud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        P2_HpBar.fillAmount = P2_Hp.health / P2_Hp.maxhealth;
+        Hitpoints();
+        
+        
         P2_Blinks.text = P2_PMov.currentBlinks.ToString();
         P2_BlinkCd.fillAmount = P2_PMov.nextBlinkTimer / P2_PMov.blinkCoolDown;
         WeaponGetter();
@@ -97,6 +100,12 @@ public class P2_Hud : MonoBehaviour
     public void GotHit()
     {
         hasTakenDmg = true;
+    }
+
+    public void Hitpoints()
+    {
+        P2_HpBar.fillAmount = P2_Hp.health / P2_Hp.maxhealth;
+        p2_HpText.text = P2_Hp.health + " / " + P2_Hp.maxhealth;
     }
 
 }

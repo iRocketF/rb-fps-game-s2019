@@ -20,7 +20,7 @@ public class P1_Hud : MonoBehaviour
     public TextMeshProUGUI P1_Score;
     public Image crossHair;
     public TextMeshProUGUI p1_WinText;
-
+    public TextMeshProUGUI P1_HpText;
     public Image damageIndicator;
     public float dmgTimer;
     public float dmgTimerCD;
@@ -38,7 +38,10 @@ public class P1_Hud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        P1_HpBar.fillAmount = P1_Hp.health / P1_Hp.maxhealth;
+
+        Hitpoints();
+        
+
         P1_Blinks.text = P1_PMov.currentBlinks.ToString();
         P1_BlinkCd.fillAmount = P1_PMov.nextBlinkTimer / P1_PMov.blinkCoolDown;
         WeaponGetter();
@@ -100,6 +103,12 @@ public class P1_Hud : MonoBehaviour
 
         damageIndicator.enabled = true;
 
+    }
+
+    public void Hitpoints()
+    {
+        P1_HpBar.fillAmount = P1_Hp.health / P1_Hp.maxhealth;
+        P1_HpText.text = P1_Hp.health + " / " + P1_Hp.maxhealth;
     }
 
     /*
