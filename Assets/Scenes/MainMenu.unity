@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5450,7 +5450,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 687043612}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1248577711
@@ -5547,7 +5547,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 834769083}
-        m_MethodName: Play
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5734,11 +5734,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: barbecuebeam2
       objectReference: {fileID: 0}
-    - target: {fileID: 7085657093182505104, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6686507069702531480, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5809,6 +5804,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 7085657093182505104, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6486245233065301652, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9078221517610725686, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
         type: 3}
       propertyPath: m_Enabled
@@ -5817,11 +5822,6 @@ PrefabInstance:
     - target: {fileID: 318225751418587102, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6486245233065301652, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2757857809050107158, guid: 2c75fd30f9d2a27418fe534f93a0aba7,
