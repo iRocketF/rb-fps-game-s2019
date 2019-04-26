@@ -753,6 +753,16 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5792351900914392858, guid: cf08566c5f685a14f8a378f348dd6777,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 125.638245
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143988597757678046, guid: cf08566c5f685a14f8a378f348dd6777,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.5999985
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf08566c5f685a14f8a378f348dd6777, type: 3}
 --- !u!1 &1211283676 stripped
@@ -1003,7 +1013,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2031525614
 MonoBehaviour:
   m_ObjectHideFlags: 0
