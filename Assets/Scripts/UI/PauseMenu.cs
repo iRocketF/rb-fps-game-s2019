@@ -10,9 +10,22 @@ public class PauseMenu : MonoBehaviour
     public GameObject settarit;
 
     // Update is called once per frame
+    void Start()
+    {
+        isPaused = true;
+    }
     void Update()
     {
-        if(Input.GetButtonDown("GamePad_Pause")) {
+        if(Input.GetButtonDown("GamePad1_Pause")) {
+            
+            if (isPaused) {
+                Resume ();
+            } else {
+                Pause();
+            }
+        }
+        if(Input.GetButtonDown("GamePad2_Pause")) {
+            
             if (isPaused) {
                 Resume ();
             } else {
