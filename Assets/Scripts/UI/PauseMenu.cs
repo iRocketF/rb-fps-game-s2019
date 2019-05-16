@@ -12,11 +12,11 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        isPaused = true;
+        pauseUI.SetActive(false);
     }
     void Update()
     {
-        if(Input.GetButtonDown("GamePad1_Pause")) {
+        if(Input.GetButtonDown("GamePad_Pause1")) {
             
             if (isPaused) {
                 Resume ();
@@ -24,14 +24,14 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
-        if(Input.GetButtonDown("GamePad2_Pause")) {
+        /* if(Input.GetButtonDown("GamePad2_Pause")) {
             
             if (isPaused) {
                 Resume ();
             } else {
                 Pause();
             }
-        }
+        }*/
     }
     public void Resume () {
         pauseUI.SetActive(false);
