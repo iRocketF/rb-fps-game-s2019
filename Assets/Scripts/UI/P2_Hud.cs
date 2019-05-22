@@ -17,10 +17,11 @@ public class P2_Hud : MonoBehaviour
     public WeaponAmmo P2_WpAmmo2;
     public WeaponSwitch P2_WpSwitch;
     public int P2_WpSel;
-    public TextMeshProUGUI p2_WinText;
     public TextMeshProUGUI p2_HpText;
     public Image TakenDmg;
     public TextMeshProUGUI P2_Score;
+
+    public Image P2_WinImg;
 
  
 
@@ -82,11 +83,11 @@ public class P2_Hud : MonoBehaviour
     {
         if (GameManager.instance.p2_win)
         {
-            p2_WinText.text = "YOU WIN!";
+            P2_WinImg.enabled=true;
         }
         else if (GameManager.instance.p2_win == false)
         {
-            p2_WinText.text = " ";
+            P2_WinImg.enabled=false;
         }
     }
 
