@@ -21,8 +21,8 @@ TagManager:
   - PostProcessing
   - P1Weapon
   - P2Weapon
-  - 
-  - 
+  - P1CharModel
+  - P2CharModel
   - 
   - 
   - 
@@ -45,4 +45,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: 1
+    uniqueID: 1800672981
+    locked: 0
+  - name: 2
+    uniqueID: 1176331693
+    locked: 0
+  - name: 3
+    uniqueID: 1277397257
     locked: 0

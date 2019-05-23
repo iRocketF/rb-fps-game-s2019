@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(0);
             gameEndTimer = 0;
+            
             p1_win = false;
             p2_win = false;
             

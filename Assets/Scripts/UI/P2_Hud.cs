@@ -17,9 +17,12 @@ public class P2_Hud : MonoBehaviour
     public WeaponAmmo P2_WpAmmo2;
     public WeaponSwitch P2_WpSwitch;
     public int P2_WpSel;
-    public TextMeshProUGUI p2_WinText;
     public TextMeshProUGUI p2_HpText;
     public Image TakenDmg;
+    public TextMeshProUGUI P2_Score;
+
+    public Image P2_WinImg;
+
  
 
 
@@ -42,7 +45,7 @@ public class P2_Hud : MonoBehaviour
         WeaponGetter();
         WpAmmoText();
 
-        //P2_Score.text = "P1: " + GameManager.instance.player1Score + " / P2: " + GameManager.instance.player2Score;
+        P2_Score.text = GameManager.instance.player2Score + " / " + GameManager.instance.wins;
         P2_HpBar.color = Color.Lerp(Color.red, Color.green, P2_Hp.health / P2_Hp.maxhealth);
         WinnerText();
 
@@ -80,11 +83,11 @@ public class P2_Hud : MonoBehaviour
     {
         if (GameManager.instance.p2_win)
         {
-            p2_WinText.text = "YOU WIN!";
+            P2_WinImg.enabled=true;
         }
         else if (GameManager.instance.p2_win == false)
         {
-            p2_WinText.text = " ";
+            P2_WinImg.enabled=false;
         }
     }
 

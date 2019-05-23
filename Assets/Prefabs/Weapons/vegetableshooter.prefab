@@ -60,6 +60,7 @@ MonoBehaviour:
     type: 3}
   player1_Hud: {fileID: 6706893844627266510, guid: 7e45e6addc3532b4084c5263c479465a,
     type: 3}
+  isShooting: 0
 --- !u!114 &7292397128785369223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 654348cedbbd6464f8bd796739bcc992, type: 3}
+  - {fileID: 2100000, guid: caa943877b3d35f43b3217d57f72b826, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

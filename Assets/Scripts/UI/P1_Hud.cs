@@ -22,6 +22,7 @@ public class P1_Hud : MonoBehaviour
     public TextMeshProUGUI p1_WinText;
     public TextMeshProUGUI P1_HpText;
     public Image TakenDmg;
+    public Image P1_WinImg;
 
 
 
@@ -44,7 +45,7 @@ public class P1_Hud : MonoBehaviour
         WeaponGetter();
         WpAmmoText();
 
-        P1_Score.text = "P1: " + GameManager.instance.player1Score + " / P2: " + GameManager.instance.player2Score;
+        P1_Score.text = GameManager.instance.player1Score + " / " + GameManager.instance.wins;
         P1_HpBar.color = Color.Lerp(Color.red, Color.green, P1_Hp.health / P1_Hp.maxhealth);
         WinnerText();
 
@@ -82,12 +83,13 @@ public class P1_Hud : MonoBehaviour
     }
     public void WinnerText()
     {
-        if(GameManager.instance.p1_win)
+        if (GameManager.instance.p1_win)
         {
-            p1_WinText.text = "YOU WIN!";
-        } else if(GameManager.instance.p1_win == false)
+            P1_WinImg.enabled=true;
+        }
+        else if (GameManager.instance.p1_win == false)
         {
-            p1_WinText.text = " ";
+            P1_WinImg.enabled=false;
         }
     }
 

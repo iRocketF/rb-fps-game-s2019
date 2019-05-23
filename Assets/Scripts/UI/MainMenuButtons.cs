@@ -11,10 +11,20 @@ public class MainMenuButtons : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        if (AudioManager.instance.IsPlaying("sound_music_menu"))
+        {
+            AudioManager.instance.StopSound("sound_music_menu");
+        }
+
+        AudioManager.instance.PlaySound("sound_music_menu");
 
     }
     public void Play() {
         SceneManager.LoadScene(2);
+        if (AudioManager.instance.IsPlaying("sound_music_menu"))
+        {
+            AudioManager.instance.StopSound("sound_music_menu");
+        }
     }
 
     public void Options() {
