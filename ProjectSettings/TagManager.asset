@@ -21,8 +21,8 @@ TagManager:
   - PostProcessing
   - P1Weapon
   - P2Weapon
-  - 
-  - 
+  - P1CharModel
+  - P2CharModel
   - 
   - 
   - 
